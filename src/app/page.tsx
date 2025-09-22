@@ -1,14 +1,15 @@
 import ContactUs from "@/components/HomeComponents/ContactUs";
 import FocusAreas from "@/components/HomeComponents/FocusAreas";
-import { Hero } from "@/components/HomeComponents/Hero";
-
+import HeroSection from "@/components/HomeComponents/HeroSection";
+import OurPartners from "@/components/HomeComponents/OurPartners";
 
 export default function Home() {
   return (
-    <div className="bg-[#081623] "   >
-      <Hero/>
-      <FocusAreas/>
-      <ContactUs/>
+    <div className="bg-white "   >
+        <HeroSection/>
+        <FocusAreas/>
+        <OurPartners/>
+        <ContactUs/>
     </div>
     );
 }
