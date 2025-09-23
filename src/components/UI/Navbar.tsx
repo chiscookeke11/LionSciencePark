@@ -27,7 +27,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="w-full  bg-transparent py-3 px-4 lg:px-10 lg:pr-20  flex items-center justify-between font-poppins fixed top-0 left-0 z-50  " >
+        <nav className="w-full  bg-transparent py-3 px-4 lg:px-10 lg:pr-20  flex items-center justify-between font-poppins absolute top-0 left-0 z-50  " >
             <Link href={"/"} >
                 <Image src={"/logo/LSP-logo-blue-removeBG.png"} alt="logo" height={10} width={150} className="w-[100px] h-[50px] md:w-[150px] md:h-[60px] object-center object-cover  " />
             </Link>

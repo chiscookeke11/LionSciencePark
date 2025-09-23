@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Poppins, Signika } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/UI/Navbar";
 
@@ -24,6 +24,11 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 })
 
+const signika = Signika({
+  variable: "--font-signika",
+  subsets: ["latin"]
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,8 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${signika.variable} antialiased`}
       >
+            <Navbar />
         {children}
       </body>
     </html>

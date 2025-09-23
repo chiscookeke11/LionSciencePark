@@ -16,14 +16,14 @@ interface CardProps {
 
 const Card = ({ data }: CardProps) => {
     return (
-        <div className=" w-full max-w-xs md:max-w-md h-fit  flex flex-col items-center justify-between gap-3   " >
+        <div className=" w-full max-w-xs md:max-w-md h-fit  flex flex-col items-center justify-between gap-3  group " >
 
-            <div className="  w-full flex items-center justify-center " >
-                <Image src={"/homepage-images/image1.webp"} alt={`${data.title}-image`} width={500} height={500} className="object-cover object-center h-[300px] w-full" />
+            <div className="  w-full flex items-center justify-center overflow-hidden rounded-md " >
+                <Image src={data.img} alt={`${data.title}-image`} width={500} height={500} className="object-cover object-center h-[300px] w-full group-hover:scale-125 transform transition-all duration-300 " />
             </div>
-            <div className=" w-full h-fit  px-6 py-10 " >
-                <h2 className="text-2xl font-semibold mb-3 text-[#008CC1]" >{data.title} </h2>
-                <p className=" font-medium text-base text-white" >{data.description} </p>
+            <div className=" w-full h-fit  px-2 md:px-6 py-4 md:py-10 " >
+                <h2 className=" text-xl md:text-2xl font-semibold mb-1 md:mb-3 text-[#008CC1]" >{data.title} </h2>
+                <p className=" font-medium text-base text-white font-signika " >{data.description} </p>
             </div>
         </div>
     )
@@ -32,7 +32,7 @@ const Card = ({ data }: CardProps) => {
 export default function FocusAreas() {
     return (
         <section className="w-full py-20 px-[3%] md:px-[4%] flex flex-col items-center gap-14  font-poppins bg-[#081623] " >
-            <h1 className=" text-2xl md:text-4xl font-semibold text-[#008CC1] " >Focus Areas</h1>
+            <h1 className=" text-3xl md:text-4xl font-semibold text-[#008CC1] " >Focus Areas</h1>
 
 
             <div className="w-full  grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-10 gap-y-10 place-items-center justify-items-center  " >
