@@ -40,15 +40,22 @@ export default function Footer() {
                     <h4 className="text-xl font-poppins text-[#008CC1]">Socials</h4>
                     <ul className={`w-fit flex items-start gap-7  `} >
                         {socialsData.map((socialLink, index) => (
-                            <li key={index} className=" text-sm  text-gray-400 hover:text-gray-200 transition-all duration-250 transform hover:scale-125 " ><Link href={socialLink.url} > {socialLink.icon}</Link> </li>
+                            <li key={index} className=" text-sm  text-gray-400 hover:text-gray-200 transition-all duration-250 transform hover:scale-125 " >
+                                <a href={socialLink.url} target={socialLink.name === "Email" ? "_parent" : "_blank"} rel="noopener noreferrer"> {socialLink.icon}
+                                </a> </li>
                         ))}
+                    </ul>
+
+                    <ul className={`w-fit flex flex-col items-start gap-2 mt-4  `}>
+                        <li className=" text-sm  text-gray-400 hover:text-gray-200 transition-all duration-250 ">+2348033164062 </li>
+                        <li className=" text-sm  text-gray-400 hover:text-gray-200 transition-all duration-250 ">+2348131245821</li>
                     </ul>
                 </div>
 
 
             </div>
 
-          <hr className="bg-white/10 w-full h-0.5 border-none " />
+            <hr className="bg-white/10 w-full h-0.5 border-none " />
 
             <small className="text-xs text-gray-400 font-medium " >© 2025 Lion Science Park. All rights reserved.</small>
 

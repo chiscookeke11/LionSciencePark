@@ -14,11 +14,15 @@ export default function AboutUs() {
                     Our mission is to transform ideas into sustainable solutions by supporting startups, researchers, and companies with incubation programs, co-working spaces, and technology transfer services. Through strategic partnerships and cutting-edge initiatives, we are building a vibrant innovation ecosystem that powers economic growth and societal development.</p>
             </div>
 
-            <div className=" h-[370px] w-[370px] md:w-[500px] md:h-[500px]  flex items-center justify-center relative  rounded-[45%] rounded-tr-none overflow-hidden " >
+         <div className=" relative" >
+
+            <Image src={"/homepage-images/dots.svg"} alt="image" height={500} width={500} className="w-[30%] h-[50%] object-center  absolute " />
+               <div className=" h-[370px] w-[370px] md:w-[500px] md:h-[500px]  flex items-center justify-center relative  rounded-[45%] rounded-tr-none overflow-hidden " >
 
                 <Image src={"/homepage-images/ict.webp"} alt="image" height={500} width={500} className="w-full h-full object-center object-cover" />
 
             </div>
+         </div>
         </section>
     )
 }
