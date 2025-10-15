@@ -22,8 +22,8 @@ const Card = ({ data }: CardProps) => {
                 <Image src={data.img} alt={`${data.title}-image`} width={500} height={500} className="object-cover object-center h-[300px] w-full group-hover:scale-125 transform transition-all duration-300 " />
             </div>
             <div className=" w-full h-fit  px-2 md:px-6 py-4 md:py-10 " >
-                <h2 className=" text-xl md:text-2xl font-semibold mb-1 md:mb-3 text-[#008CC1]" >{data.title} </h2>
-                <p className=" font-medium text-base text-white font-signika " >{data.description} </p>
+                <h2 className=" text-2xl md:text-3xl font-semibold mb-1 md:mb-3 text-[#008CC1]" >{data.title} </h2>
+                <p className=" font-medium text-lg text-white font-signika " >{data.description} </p>
             </div>
         </div>
     )

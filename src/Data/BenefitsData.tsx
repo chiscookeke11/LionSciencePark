@@ -1,8 +1,12 @@
-
+import BusinessIcon from '@mui/icons-material/Business';
+import MapIcon from '@mui/icons-material/Map';
+import SchoolIcon from '@mui/icons-material/School';
 
 
 export const BenefitsData = [
     {
+
+        icon: BusinessIcon,
         title: "To Companies",
         desc: "The major reason for a tenant to be in at Lion Science Park is the competences that may be found nearby. The lecturers, the students, researchers and the science projects at the University of Nigeria have a big impact in solving companies problems. More benefits to companies include:",
 
@@ -17,10 +21,12 @@ export const BenefitsData = [
         ]
     },
     {
+        icon: MapIcon,
         title: "To Regions",
         desc: "The regional economy is of course a big winner as well in the creation of a successful science park. The science park becomes a catalysts for regional economic growth and stimulates growth and entrepreneurship through innovation which of course also creates jobs."
     },
     {
+        icon: SchoolIcon,
         title: "To Universities",
         desc: "The University becomes renowned when a science park is created and gets more focus from the government especially when research goes to practice and creates new commercial opportunities. A science park facilitates the university-industry links and accelerates the flow of intellectual property into the economy. Lion Science Park also offers students and PhDs training and employment possibilities."
     }

@@ -118,7 +118,7 @@ export default function ContactUs() {
                 </div>
 
 
-                <button disabled={loading} className=" flex items-center justify-center gap-4 bg-[#008CC1] py-4 px-5 text-white rounded-md cursor-pointer transform hover:scale-105 transition-all duration-300 " >Send Message {loading ? "..." : <Send size={18} />} </button>
+                <button type="submit" disabled={loading} className=" flex items-center justify-center gap-4 bg-[#008CC1] py-4 px-5 text-white rounded-md cursor-pointer transform hover:scale-105 transition-all duration-300 " >Send Message {loading ? "..." : <Send size={18} />} </button>
             </form>
         </section>
     )
