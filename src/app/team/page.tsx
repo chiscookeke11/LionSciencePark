@@ -31,13 +31,13 @@ export default function Page() {
 
 
                 {TeamData.map((data, i) => (
-                    <div key={i} className="w-full max-w-sm flex flex-col  items-start justify-center min-h-[380px] border border-[#008CC1] shadow-md rounded-xl overflow-hidden  ">
+                    <div key={i} className="w-full max-w-sm flex flex-col cursor-pointer items-start justify-center min-h-[480px] border border-[#008CC1] shadow-md rounded-xl overflow-hidden  ">
 
 
                         {/* image  */}
 
                         <div className="w-full h-full flex-1 flex items-center justify-center overflow-hidden relative " >
-                            <Image src={"/about-us/side.webp"} alt={`${data.name}-image`} fill className="object-center object-cover" />
+                            <Image src={data.image} alt={`${data.name}-image`} fill className="object-center object-cover" />
                         </div>
 
 
@@ -49,9 +49,9 @@ export default function Page() {
 
                             <div className="w-full flex items-center" >
 
-                                <a href={data.linkedInUrl} className="  w-1/3 flex items-center justify-center py-4 px-5 border-r border-t border-[#008CC1] " > <LinkedIn /> </a>
-                                <a href={data.linkedInUrl} className=" w-1/3 flex items-center justify-center py-4 px-5 border-r  border-t border-[#008CC1]" > <Facebook /> </a>
-                                <a href={data.linkedInUrl} className=" w-1/3 flex items-center justify-center py-4 px-5  border-t border-[#008CC1]" > <Mail /> </a>
+                                <a href={data.linkedInUrl} target="_blank" className="  w-1/3 flex items-center justify-center py-4 px-5 border-r border-t border-[#008CC1] " > <LinkedIn /> </a>
+                                <a href={data.linkedInUrl} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5 border-r  border-t border-[#008CC1]" > <Facebook /> </a>
+                                <a href={data.linkedInUrl} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5  border-t border-[#008CC1]" > <Mail /> </a>
 
                             </div>
 
