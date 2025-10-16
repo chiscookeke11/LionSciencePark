@@ -27,16 +27,18 @@ export default function Page() {
 
 
                 {ServiceData.map((data, i) => (
-                    <div key={i} className="w-full max-w-sm flex items-center justify-center relative cursor-pointer bg-red-500 min-h-[300px] h-full rounded-sm overflow-hidden group py-[200px] " >
+                    <div key={i} className="w-full max-w-sm flex flex-col gap-3 items-center justify-center cursor-pointer  h-full rounded-sm overflow-hidden group " >
 
 
-                    <Image src={"/about-us/about-us-hero.webp"} fill alt="service-image" className="object-cover object-center" />
-                    <div className=" bg-white/55 absolute inset-0 h-full w-full group-hover:bg-black/55 duration-300 ease-in-out " />
-                    <div className="w-full h-full flex items-center justify-center flex-col gap-4 absolute top-0 left-0 z-40 px-5 " >
-                        <h3 className=" font-bold text-3xl text-[#081623] group-hover:text-white duration-300 transition-all ease-in-out font-signika text-center " > {data.title} </h3>
-                        <p  className=" font-semibold text-base opacity-0 group-hover:opacity-100  text-center  text-white transition-all duration-300 ease-in-out font-signika  " > {data.description} </p>
+                        <div className="w-full h-[280px] overflow-hidden flex items-center justify-center  " >
+                            <Image src={data.image} height={500} width={500} alt="service-image" className=" h-full w-full object-cover object-center group-hover:scale-125 transition-all duration-300 ease-in-out " />
+                        </div>
+
+                        <div className="w-full h-full flex items-start justify-center flex-col gap-4 flex-1  px-5  " >
+                            <h3 className=" font-bold text-2xl text-[#081623]  font-poppins text-start " > {data.title} </h3>
+                            <p className=" font-semibold text-lg   text-start  text-gray-400 transition-all duration-300 ease-in-out font-signika  " > {data.description} </p>
+                        </div>
                     </div>
-                </div>
                 ))}
 
 

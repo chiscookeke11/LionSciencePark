@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="w-full pt-20 pb-10 px-10 bg-[#081623] text-white flex flex-col items-center justify-center  gap-18 font-signika " >
+        <footer className="w-full pt-20 pb-10 px-[4%] bg-[#081623] text-white flex flex-col items-center justify-center  gap-18 font-signika " >
 
 
             <div className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 place-items-start justify-items-end h-full p-1" >

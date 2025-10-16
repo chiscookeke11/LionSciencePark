@@ -1,36 +1,32 @@
-
-
-
 export const ServiceData = [
     {
         title: "Working Space",
-        description: "Super excellent smart office spaces that suit your need. Lion Science Park provides super smart offices, desk and spaces that you can use for a day, a week, a month, every other day, frequently or whenever you need to for start-ups, big companies, entrepreneurs, freelancers etc..",
-        image: "",
+        description: "Lion Science Park offers flexible, smart office spaces designed for startups, companies, freelancers, and entrepreneurs. You can book a space daily, weekly, or monthly to suit your needs.",
+        image: "/service-images/working-space.png",
     },
     {
         title: "Facility Management",
-        description: "We offer complete facility management services and consultancy. Our facility managers ensure the smooth running of the work environment while you concentrate on running your business. We offer services that involves setting up your business space that suits you-specialized incubation, co-working spaces, startup, big company etc. We also maintain the buildings, Air conditioners, lighting, security and the entire business environment to international standard. Other unique services are also available. Let us have a discussion on your needs.",
-        image: "",
+        description: "We provide full facility management and consultancy services to ensure your workspace operates smoothly. Our team handles everything from maintenance to setup, allowing you to focus on your business.",
+        image: "/service-images/facility-management.png",
     },
     {
         title: "Angel Investing & Venture Capital Financing",
-        description: "Startups and early stage companies face the daunting financing hurdle in a bid to scale up their businesses and eventually become tech giants. We understand the struggle at this stage of a business and because we want to build a formidable technology innovation ecosystem in Nigeria, we therefore create the platform where Business Angels and Venture Capitalists in Nigeria/Africa can connect and interact with the innovators for funding options.",
-        image: "",
+        description: "We connect startups and early-stage companies with investors to help them secure funding. Our goal is to strengthen Nigeria’s innovation ecosystem by bridging innovators with venture capital opportunities.",
+        image: "/service-images/angel-investing.png",
     },
     {
         title: "Intellectual Property Technology Transfer Office",
-        description: "IPTTO was established to promote and manage the intellectual property policy and portfolio, namely patents, copyrights, design and trademarks in the university. It is expected to foster strong collaboration between university and industry, provide patents registration and acquisition services, promote robust patent policy and drive commercialisation of products of patents and innovations for economic rewards.",
-        image: "",
+        description: "IPTTO manages patents, copyrights, and trademarks within the university. It fosters industry collaboration, supports patent registration, and promotes innovation commercialization.",
+        image: "/service-images/intellectual-property.png",
     },
     {
         title: "Roar Nigeria Incubator Hub",
-        description: "Roar Nigeria Incubator Hub is the first full-fledged university based incubator hub in Nigeria. It has state-of-the-art facilities for incubating business ideas. The incubator has 24 hours non-stop regular power and wireless broadband.",
-        image: "",
+        description: "Roar Nigeria Incubator Hub is the first university-based tech incubator in Nigeria. It offers modern facilities, 24-hour power supply, and high-speed internet for startups to grow.",
+        image: "/service-images/roar-hub.png",
     },
     {
         title: "Lion Health Hub",
-        description: "Lion Science Park Health Hub is an innovative initiative aimed at stimulating and facilitating our students mentally towards solving important health issues that affect students and the society at large.",
-        image: "",
+        description: "The Lion Health Hub inspires students to develop innovative solutions to pressing health challenges. It serves as a platform for health-focused research and societal impact.",
+        image: "/service-images/lion-health-hub.png",
     },
-
 ]

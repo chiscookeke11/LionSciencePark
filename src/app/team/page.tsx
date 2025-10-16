@@ -49,9 +49,9 @@ export default function Page() {
 
                             <div className="w-full flex items-center" >
 
-                                <a href={data.linkedInUrl} target="_blank" className="  w-1/3 flex items-center justify-center py-4 px-5 border-r border-t border-[#008CC1] " > <LinkedIn /> </a>
-                                <a href={data.linkedInUrl} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5 border-r  border-t border-[#008CC1]" > <Facebook /> </a>
-                                <a href={data.linkedInUrl} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5  border-t border-[#008CC1]" > <Mail /> </a>
+                                <a href={data.linkedInUrl} target="_blank" className="  w-1/3 flex items-center justify-center py-4 px-5 border-r border-t border-[#008CC1] hover:bg-[#008CC1] hover:text-white transition-all duration-300 ease-in-out " > <LinkedIn /> </a>
+                                <a href={data.linkedInUrl} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5 border-r  border-t border-[#008CC1] hover:bg-[#008CC1] hover:text-white transition-all duration-300 ease-in-out" > <Facebook /> </a>
+                                <a href={data.linkedInUrl} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5  border-t border-[#008CC1] hover:bg-[#008CC1] hover:text-white transition-all duration-300 ease-in-out"  > <Mail /> </a>
 
                             </div>
 
