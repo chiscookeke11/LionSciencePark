@@ -60,7 +60,7 @@ export default function Page() {
 
                 <div className=" w-[340px] h-[340px] border-2 border-[#008CC1] flex items-center justify-center relative rounded-sm "  >
 
-                    <Image src={"/about-us/side.webp"} alt="About-us-img" width={500} height={500} className=" w-full h-full object-center object-cover absolute top-4 left-4 " />
+                    <Image src={"/about-us/side.webp"} alt="About-us-img" width={500} height={500} className=" w-full h-full object-center object-cover absolute top-4 left-4 rounded-sm " />
 
                 </div>
             </section>

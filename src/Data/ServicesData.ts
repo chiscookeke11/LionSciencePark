@@ -13,23 +13,23 @@ export const ServiceData = [
         image: "",
     },
     {
-        title: "",
-        description: "",
+        title: "Angel Investing & Venture Capital Financing",
+        description: "Startups and early stage companies face the daunting financing hurdle in a bid to scale up their businesses and eventually become tech giants. We understand the struggle at this stage of a business and because we want to build a formidable technology innovation ecosystem in Nigeria, we therefore create the platform where Business Angels and Venture Capitalists in Nigeria/Africa can connect and interact with the innovators for funding options.",
         image: "",
     },
     {
-        title: "",
-        description: "",
+        title: "Intellectual Property Technology Transfer Office",
+        description: "IPTTO was established to promote and manage the intellectual property policy and portfolio, namely patents, copyrights, design and trademarks in the university. It is expected to foster strong collaboration between university and industry, provide patents registration and acquisition services, promote robust patent policy and drive commercialisation of products of patents and innovations for economic rewards.",
         image: "",
     },
     {
-        title: "",
-        description: "",
+        title: "Roar Nigeria Incubator Hub",
+        description: "Roar Nigeria Incubator Hub is the first full-fledged university based incubator hub in Nigeria. It has state-of-the-art facilities for incubating business ideas. The incubator has 24 hours non-stop regular power and wireless broadband.",
         image: "",
     },
     {
-        title: "",
-        description: "",
+        title: "Lion Health Hub",
+        description: "Lion Science Park Health Hub is an innovative initiative aimed at stimulating and facilitating our students mentally towards solving important health issues that affect students and the society at large.",
         image: "",
     },
 

@@ -22,19 +22,19 @@ export default function Page() {
 
             {/* services section  */}
 
-            <section className=" w-full px-[4%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 gap-10 " >
+            <section className=" w-full px-[6%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 gap-10 place-items-center justify-items-center " >
 
 
 
                 {ServiceData.map((data, i) => (
-                    <div key={i} className="w-full  flex items-center justify-center relative cursor-pointer bg-red-500 h-[400px] rounded-sm group " >
+                    <div key={i} className="w-full max-w-sm flex items-center justify-center relative cursor-pointer bg-red-500 min-h-[300px] h-full rounded-sm overflow-hidden group py-[200px] " >
 
 
                     <Image src={"/about-us/about-us-hero.webp"} fill alt="service-image" className="object-cover object-center" />
                     <div className=" bg-white/55 absolute inset-0 h-full w-full group-hover:bg-black/55 duration-300 ease-in-out " />
-                    <div className="w-full h-full flex items-center justify-center flex-col gap-4 absolute top-0 left-0 z-40 " >
-                        <h3 className=" font-bold text-3xl text-[#081623] group-hover:text-white duration-300 transition-all ease-in-out font-signika " > {data.title} </h3>
-                        <p  className=" font-semibold text-base hidden group-hover:block text-center  text-white transition-all duration-300 ease-in-out font-signika " > {data.description} </p>
+                    <div className="w-full h-full flex items-center justify-center flex-col gap-4 absolute top-0 left-0 z-40 px-5 " >
+                        <h3 className=" font-bold text-3xl text-[#081623] group-hover:text-white duration-300 transition-all ease-in-out font-signika text-center " > {data.title} </h3>
+                        <p  className=" font-semibold text-base opacity-0 group-hover:opacity-100  text-center  text-white transition-all duration-300 ease-in-out font-signika  " > {data.description} </p>
                     </div>
                 </div>
                 ))}
