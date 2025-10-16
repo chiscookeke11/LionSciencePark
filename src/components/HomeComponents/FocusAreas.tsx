@@ -18,7 +18,7 @@ const Card = ({ data }: CardProps) => {
     return (
         <div className=" w-full max-w-xs md:max-w-md h-fit  flex flex-col items-center justify-between gap-3  group " >
 
-            <div className="  w-full flex items-center justify-center overflow-hidden rounded-md " >
+            <div className="  w-full flex items-center justify-center overflow-hidden rounded-md bg-gray-400 " >
                 <Image src={data.img} alt={`${data.title}-image`} width={500} height={500} className="object-cover object-center h-[300px] w-full group-hover:scale-125 transform transition-all duration-300 " />
             </div>
             <div className=" w-full h-fit  px-2 md:px-6 py-4 md:py-10 " >

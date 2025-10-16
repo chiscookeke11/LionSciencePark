@@ -13,8 +13,8 @@ export default function Page() {
         <div className="bg-white">
 
             {/* about us hero section  */}
-            <section className=" w-full h-[80vh] bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative " style={{ backgroundImage: "url('/about-us/about-us-hero.webp')" }} >
-                <div className=" bg-black/45 absolute inset-0 h-full w-full " />
+            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative " style={{ backgroundImage: "url('/about-us/about-us-hero.webp')" }} >
+                <div className=" bg-black/55 absolute inset-0 h-full w-full " />
 
                 <div className=" flex flex-col gap-3 z-30 " >
                     <h2 className=" font-poppins text-4xl md:text-8xl font-bold  " >ABOUT US</h2>
@@ -25,7 +25,7 @@ export default function Page() {
 
 
             {/* Our Mission Section  */}
-            <section className=" w-[80%] md:min-w-xl my-32 flex flex-col md:flex-row items-center justify-between gap-10 mx-auto  py-5 pb-20 border-b-2 border-[#008CC1] " >
+            <section className=" w-[95%] md:w-[80%] md:min-w-xl my-32 flex flex-col md:flex-row items-center justify-between gap-10 mx-auto  py-5 pb-20 border-b-2 border-[#008CC1] " >
 
                 <h3 className=" text-3xl md:text-4xl mb-2 font-semibold md:mb-4 text-[#008CC1] font-poppins" >Our Mission</h3>
 
@@ -60,7 +60,7 @@ export default function Page() {
 
                 <div className=" w-[340px] h-[340px] border-2 border-[#008CC1] flex items-center justify-center relative rounded-sm "  >
 
-                    <Image src={"/about-us/side.webp"} alt="About-us-img" width={500} height={500} className=" w-full h-full object-center object-cover absolute top-4 left-4 rounded-sm " />
+                    <Image src={"/homepage-images/lsp-building.jpg"} alt="About-us-img" width={500} height={500} className=" w-full h-full object-center object-cover absolute top-4 left-4 rounded-sm " />
 
                 </div>
             </section>
@@ -95,8 +95,8 @@ export default function Page() {
 
 
             {/* Benefits of LSP */}
-            <section className="w-full md:min-w-xl flex flex-col items-center gap-10  py-20 px-[3%] " >
-                <div className="text-center my-16 " >
+            <section className="w-full md:min-w-xl flex flex-col items-center gap-10  py-20 px-[2%] " >
+                <div className="text-center my-12 " >
                     <h3 className=" text-3xl md:text-4xl mb-2 font-semibold md:mb-4 text-[#008CC1] font-poppins">Benefits of LSP</h3>
                     <p className="font-signika  text-xl md:text-2xl max-w-4xl" >Being part of Lion Science Park means being part of a hot spot and a learning space. At Lion Science Park you will meet clients, partners and academic expertise in a vibrant environment where things happen – all the time.</p>
                 </div>

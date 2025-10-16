@@ -12,7 +12,7 @@ export default function Page() {
     return (
         <div className="bg-white" >
             {/* Team hero section  */}
-            <section className=" w-full h-[80vh] bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
+            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
                 <div className=" bg-black/45 absolute inset-0 h-full w-full " />
 
                 <div className=" flex flex-col gap-3 z-30 " >
@@ -44,7 +44,7 @@ export default function Page() {
                         <div className="w-full  flex flex-col pt-7  gap-6" >
                             <div className="px-5 flex flex-col items-center justify-center gap-1 " >
                                 <h5 className=" font-poppins text-xl font-semibold   " >  {data.name} </h5>
-                                <p className=" fome] text-lg font-signika text-[#008CC1]" >{data.position} </p>
+                                <p className=" fome] text-lg font-signika text-[#008CC1] text-center" >{data.position} </p>
                             </div>
 
                             <div className="w-full flex items-center" >

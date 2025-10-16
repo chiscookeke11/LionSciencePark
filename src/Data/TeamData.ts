@@ -27,4 +27,10 @@ export const TeamData = [
         position: "Manager, Lion Science Park",
         image: "/about-us/Mrs. Akwara.jpg"
     },
+    {
+        name: "Mr Anpe Fut",
+        linkedInUrl: "#",
+        position: "Federal Ministry of Science and Technology",
+        image: "/about-us/mrAn.jpg"
+    },
 ]
