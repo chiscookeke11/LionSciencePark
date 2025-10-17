@@ -9,7 +9,7 @@ export const socialsData = [
     },
     {
         name: "Facebook",
-        url: "#",
+        url: "https://web.facebook.com/LSPunn/?_rdc=1&_rdr#",
         icon: <Facebook size={20} />
     },
     {

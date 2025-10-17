@@ -30,7 +30,7 @@ export default function Page() {
                     <div key={i} className="w-full max-w-sm flex flex-col gap-3 items-center justify-center cursor-pointer  h-full rounded-sm overflow-hidden group " >
 
 
-                        <div className="w-full h-[280px] overflow-hidden flex items-center justify-center  " >
+                        <div className="w-full h-[280px] overflow-hidden flex items-center justify-center bg-gray-400  " >
                             <Image src={data.image} height={500} width={500} alt="service-image" className=" h-full w-full object-cover object-center group-hover:scale-125 transition-all duration-300 ease-in-out " />
                         </div>
 

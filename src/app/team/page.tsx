@@ -43,15 +43,15 @@ export default function Page() {
 
                         <div className="w-full  flex flex-col pt-7  gap-6" >
                             <div className="px-5 flex flex-col items-center justify-center gap-1 " >
-                                <h5 className=" font-poppins text-xl font-semibold   " >  {data.name} </h5>
+                                <h5 className=" font-poppins text-xl font-semibold text-center  " >  {data.name} </h5>
                                 <p className=" fome] text-lg font-signika text-[#008CC1] text-center" >{data.position} </p>
                             </div>
 
                             <div className="w-full flex items-center" >
 
-                                <a href={data.linkedInUrl} target="_blank" className="  w-1/3 flex items-center justify-center py-4 px-5 border-r border-t border-[#008CC1] hover:bg-[#008CC1] hover:text-white transition-all duration-300 ease-in-out " > <LinkedIn /> </a>
-                                <a href={data.linkedInUrl} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5 border-r  border-t border-[#008CC1] hover:bg-[#008CC1] hover:text-white transition-all duration-300 ease-in-out" > <Facebook /> </a>
-                                <a href={data.linkedInUrl} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5  border-t border-[#008CC1] hover:bg-[#008CC1] hover:text-white transition-all duration-300 ease-in-out"  > <Mail /> </a>
+                                <a href={data.linkedInUrl} target="_blank" className="  w-1/3 flex items-center justify-center py-4 px-5 border-r border-t border-[#008CC1] hover:bg-[#008CC1] text-[#008CC1] hover:text-white transition-all duration-300 ease-in-out " > <LinkedIn /> </a>
+                                <a href={data.facebookUrl} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5 border-r  border-t border-[#008CC1] hover:bg-[#008CC1] text-[#008CC1] hover:text-white transition-all duration-300 ease-in-out" > <Facebook /> </a>
+                                <a href={data.email} target="_blank" className=" w-1/3 flex items-center justify-center py-4 px-5  border-t border-[#008CC1] hover:bg-[#008CC1] text-[#008CC1] hover:text-white transition-all duration-300 ease-in-out"  > <Mail /> </a>
 
                             </div>
 
