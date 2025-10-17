@@ -1,4 +1,5 @@
 import { NewsBlogType } from "@/Types/types";
+import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +14,7 @@ export default function NewsCard({data}: RecentBlogCardProps) {
 
 
             <div className=" w-full bg-gray-300 h-full " >
-                <Image src={"/side.jpg"} alt="image" height={500} width={500} className="object-cover object-center h-full w-full " />
+                <CldImage src={data.image} alt="image" height={500} width={500} crop={{type: "auto", source: true}} className="object-cover object-center h-full w-full " />
             </div>
 
             <div className=" w-full flex flex-col items-center gap-3   py-2 text-center  " >
@@ -26,20 +27,3 @@ export default function NewsCard({data}: RecentBlogCardProps) {
     )
 }
 
-// "use client";
-// import { CldImage } from 'next-cloudinary';
-
-// // By default, the CldImage component applies auto-format and auto-quality to all delivery URLs for optimized delivery.
-// export default function Page() {
-//   return (
-//     <CldImage
-//       src="cld-sample-5" // Use this sample image or upload your own via the Media Explorer
-//       width="500" // Transform the image: auto-crop to square aspect_ratio
-//       height="500"
-//       crop={{
-//         type: 'auto',
-//         source: true
-//       }}
-//     />
-//   );
-// }
