@@ -111,7 +111,7 @@ export default function UpdateBlogModal({
                     title: formValues.title,
                     content: formValues.content,
                     facebook_link: formValues.facebook_link,
-                    insta_link: formValues.insta_link,
+                    instagram_link: formValues.insta_link,
                     linkedin_link: formValues.linkedin_link,
                     x_link: formValues.x_link,
                     image: imageUrl,
@@ -120,7 +120,11 @@ export default function UpdateBlogModal({
                 .eq("id", selectedIndex)
                 .select()
 
-            if (error) throw error
+            if (error) {
+                toast.error(error.message)
+                console.error(error)
+                return
+            }
 
             const updatedBlog = data?.[0]
             updateBlogInUI(updatedBlog)
@@ -193,7 +197,7 @@ export default function UpdateBlogModal({
                 <label htmlFor="title" className="w-full flex flex-col gap-1">
                     <span className="text-lg font-semibold text-[#008CC1]">Title *</span>
                     <input
-                        value={formValues.title}
+                        value={formValues.title ?? ""}
                         id="title"
                         name="title"
                         onChange={handleChange}
@@ -210,7 +214,7 @@ export default function UpdateBlogModal({
                             Twitter link
                         </span>
                         <input
-                            value={formValues.x_link}
+                            value={formValues.x_link ?? ""}
                             name="x_link"
                             onChange={handleChange}
                             id="x_link"
@@ -224,7 +228,7 @@ export default function UpdateBlogModal({
                             LinkedIn link
                         </span>
                         <input
-                            value={formValues.linkedin_link}
+                            value={formValues.linkedin_link ?? ""}
                             name="linkedin_link"
                             onChange={handleChange}
                             id="linkedin_link"
@@ -238,7 +242,7 @@ export default function UpdateBlogModal({
                             Instagram link
                         </span>
                         <input
-                            value={formValues.insta_link}
+                            value={formValues.insta_link ?? ""}
                             name="insta_link"
                             onChange={handleChange}
                             id="insta_link"
@@ -252,7 +256,7 @@ export default function UpdateBlogModal({
                             Facebook link
                         </span>
                         <input
-                            value={formValues.facebook_link}
+                            value={formValues.facebook_link ?? ""}
                             name="facebook_link"
                             onChange={handleChange}
                             id="facebook_link"
@@ -265,7 +269,7 @@ export default function UpdateBlogModal({
                 <div className="w-full flex flex-col gap-1">
                     <span className="text-lg font-semibold text-[#008CC1]">Content *</span>
                     <TiptapEditor
-                        content={formValues.content}
+                        content={formValues.content ?? ""}
                         onChange={handleTipTapChange}
                     />
                 </div>

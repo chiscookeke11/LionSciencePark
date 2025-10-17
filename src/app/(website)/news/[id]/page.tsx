@@ -3,7 +3,7 @@
 import { NewsBlogType } from "@/Types/types"
 import { useParams } from "next/navigation"
 import { useEffect, useState } from "react"
-import { supabase } from "../../../../lib/supabaseClient"
+import { supabase } from "../../../../../lib/supabaseClient"
 import Spinner from "@/components/UI/Spinner"
 
 

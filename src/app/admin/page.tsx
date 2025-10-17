@@ -11,6 +11,7 @@ import UpdateBlogModal from "@/components/adminComponents/UpdateBlogModal";
 
 
 
+
 export default function Page() {
     const [news, setNews] = useState<NewsBlogType[] | null>(null)
     const [showOptionsIndex, setShowOptionsIndex] = useState<string | null>(null);
@@ -59,7 +60,7 @@ export default function Page() {
         setNews((prevNews) =>
             prevNews
                 ? prevNews.map((news) =>
-                    news.id === updatedBlog.id ? updatedBlog : news
+                    news?.id === updatedBlog?.id ? updatedBlog : news
                 )
                 : [updatedBlog]
         )
@@ -71,6 +72,7 @@ export default function Page() {
         <div className=" w-full flex h-full min-h-screen px-[3%] py-10 bg-white font-poppins flex-col items-start gap-5 relative "  >
 
             <h1 className=" text-2xl md:text-3xl font-semibold text-[#008CC1] " >News Control Panel</h1>
+
 
             <button onClick={() => setOpenBlogModal(true)} className="mt-8 bg-[#008CC1] ml-auto px-16 py-4 font-medium flex items-center justify-center cursor-pointer rounded-md text-white transform hover:scale-105 transition-all duration-300 " >Add Blog</button>
 

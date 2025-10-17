@@ -91,6 +91,13 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
                 publicationDate: new Date().toISOString()
             }).select()
 
+            if (error) {
+                console.error("Failed to upload blog")
+                toast.error("Failed to upload blog")
+                return;
+            }
+
+
             const newBlog = data?.[0]
 
             toast.success("Blog added successfully!")
@@ -107,6 +114,9 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
             })
             setFile(null)
             setOpenBlogModal?.(false)
+
+
+
         } catch (error) {
             console.error("Failed to submit blog", error)
             if (error instanceof Error) {
@@ -192,7 +202,7 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
 
 
 
-                     <label htmlFor="insta_link" className="w-full flex flex-col gap-1">
+                    <label htmlFor="insta_link" className="w-full flex flex-col gap-1">
                         <span className="text-lg font-semibold text-[#008CC1]">Instagram link</span>
                         <input
                             value={formValues.insta_link}
@@ -208,7 +218,7 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
 
 
 
-                     <label htmlFor="linkedIn" className="w-full flex flex-col gap-1">
+                    <label htmlFor="linkedIn" className="w-full flex flex-col gap-1">
                         <span className="text-lg font-semibold text-[#008CC1]">Facebook link</span>
                         <input
                             value={formValues.facebook_link}
@@ -231,10 +241,10 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
 
                 <div className="flex gap-4 ml-auto">
                     <button
-                    type="button"
+                        type="button"
                         className="border-[#008CC1] text-[#008CC1] hover:bg-red-400 transition-all duration-300 bg-transparent cursor-pointer py-3 px-6 h-fit"
                         onClick={() => {
-                            setFormValues({ title: "", facebook_link: "", insta_link: "", linkedin_link: "", x_link: "", content: "", publicationDate:null, image: '' })
+                            setFormValues({ title: "", facebook_link: "", insta_link: "", linkedin_link: "", x_link: "", content: "", publicationDate: null, image: '' })
                             setFile(null)
                         }}
                     >

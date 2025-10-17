@@ -21,7 +21,11 @@ export default function NewsCard({data}: RecentBlogCardProps) {
 
                 <h1 className="font-syne font-semibold text-xl " >{data.title} </h1>
                 <div dangerouslySetInnerHTML= {{__html:  data.content.trim().slice(0, 60) + "..."}} className="flex items-center gap-1 text-sm font-normal "  />
-                <div className="flex items-center gap-1 text-xs font-normal " > <p>{new Date(data.publicationDate).toLocaleDateString()} </p></div>
+                <div className="flex items-center gap-1 text-xs font-normal " ><p>
+  {data.publicationDate
+    ? new Date(data.publicationDate).toLocaleDateString()
+    : "No date available"}
+</p></div>
             </div>
         </Link>
     )

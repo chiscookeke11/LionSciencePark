@@ -2,9 +2,9 @@
 
 import { NewsBlogType } from "@/Types/types"
 import { useEffect, useState } from "react"
-import { supabase } from "../../../lib/supabaseClient"
 import NewsCard from "@/components/NewsComponents/NewsCard"
 import Spinner from "@/components/UI/Spinner"
+import { supabase } from "../../../../lib/supabaseClient"
 
 
 
