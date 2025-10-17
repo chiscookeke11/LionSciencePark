@@ -31,7 +31,7 @@ export default function Page() {
 
 
                 {ServiceData.map((data, i) => (
-                    <div key={i} className="w-full max-w-sm flex flex-col gap-3 items-center justify-center cursor-pointer  h-full rounded-sm overflow-hidden group " >
+                    <div key={i} className="w-full max-w-xs md:max-w-md flex flex-col gap-3 items-center justify-center cursor-pointer  h-full rounded-sm overflow-hidden group " >
 
 
                         <div className="w-full h-[280px] overflow-hidden flex items-center justify-center bg-gray-400 rounded-t-[250px] group-hover:rounded-t-[5px]  transition-all duration-400 ease-in-out " >
