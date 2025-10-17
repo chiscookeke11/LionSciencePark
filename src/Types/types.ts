@@ -9,10 +9,13 @@ export interface FocusAreaType {
 
 
 export interface NewsBlogType {
-  id: number;
+  id?: string;
   image: string;
   title: string;
-  createdAt: Date;
   content: string
-  publicationDate: Date
+  publicationDate: Date | null,
+  facebook_link: string,
+   insta_link: string,
+        linkedin_link: string,
+        x_link: string,
 }
