@@ -12,13 +12,15 @@ export default function Page() {
     return (
         <div className="bg-white" >
             {/* Team hero section  */}
-            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
+            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative  overflow-hidden bg-fixed " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
                 <div className=" bg-black/45 absolute inset-0 h-full w-full " />
 
                 <div className=" flex flex-col gap-3 z-30 " >
                     <h2 className=" font-poppins text-4xl md:text-8xl font-bold  " >Our Team</h2>
                     <p className="font-signika  text-lg md:text-2xl max-w-2xl " >Meet the brilliant minds leading innovation and growth at Lion Science Park.</p>
                 </div>
+<Image src={"/service-images/wave-haikei.svg"} alt="wave" width={500} height={500}  className="w-full absolute bottom-0 lg:bottom-[-200px] left-0 " />
+
             </section>
 
 

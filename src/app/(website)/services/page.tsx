@@ -8,13 +8,17 @@ export default function Page() {
         <div className="bg-white" >
 
             {/* service hero section  */}
-            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
+            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative overflow-hidden bg-fixed " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
                 <div className=" bg-black/45 absolute inset-0 h-full w-full " />
 
                 <div className=" flex flex-col gap-3 z-30 " >
                     <h2 className=" font-poppins text-4xl md:text-8xl font-bold  " >Our Services</h2>
                     <p className="font-signika  text-lg md:text-2xl max-w-2xl " >Explore the wide range of innovative solutions and expertise we offer at Lion Science Park.</p>
                 </div>
+
+
+
+                <Image src={"/service-images/wave-haikei.svg"} alt="wave" width={500} height={500}  className="w-full absolute bottom-0 lg:bottom-[-200px] left-0 " />
             </section>
 
 
@@ -30,7 +34,7 @@ export default function Page() {
                     <div key={i} className="w-full max-w-sm flex flex-col gap-3 items-center justify-center cursor-pointer  h-full rounded-sm overflow-hidden group " >
 
 
-                        <div className="w-full h-[280px] overflow-hidden flex items-center justify-center bg-gray-400  " >
+                        <div className="w-full h-[280px] overflow-hidden flex items-center justify-center bg-gray-400 rounded-t-[250px] group-hover:rounded-t-[5px]  transition-all duration-400 ease-in-out " >
                             <Image src={data.image} height={500} width={500} alt="service-image" className=" h-full w-full object-cover object-center group-hover:scale-125 transition-all duration-300 ease-in-out " />
                         </div>
 

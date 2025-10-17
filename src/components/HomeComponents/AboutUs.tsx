@@ -17,7 +17,7 @@ export default function AboutUs() {
          <div className=" relative" >
 
             <Image src={"/homepage-images/dots.svg"} alt="image" height={500} width={500} className="w-[30%] h-[50%] object-center  absolute " />
-               <div className=" h-[330px] w-[330px] lg:w-[500px] lg:h-[500px]  flex items-center justify-center relative  rounded-[45%] rounded-tr-none overflow-hidden " >
+               <div className=" h-[330px] w-[330px] lg:w-[400px] lg:h-[400px]  flex items-center justify-center relative  rounded-[45%] rounded-tr-none overflow-hidden  drop-shadow-2xl" >
 
                 <Image src={"/homepage-images/ict.webp"} alt="image" height={500} width={500} className="w-full h-full object-center object-cover" />
 

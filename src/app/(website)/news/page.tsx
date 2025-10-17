@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import NewsCard from "@/components/NewsComponents/NewsCard"
 import Spinner from "@/components/UI/Spinner"
 import { supabase } from "../../../../lib/supabaseClient"
+import Image from "next/image"
 
 
 
@@ -35,13 +36,15 @@ export default function Page() {
     return (
         <div className="bg-white " >
             {/* News hero section  */}
-            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
+            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative  overflow-hidden bg-fixed " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
                 <div className=" bg-black/45 absolute inset-0 h-full w-full " />
 
                 <div className=" flex flex-col gap-3 z-30 " >
                     <h2 className=" font-poppins text-4xl md:text-8xl font-bold  " >Events & News</h2>
                     <p className="font-signika  text-lg md:text-2xl max-w-2xl " >Stay updated with the latest events and breakthroughs at Lion Science Park.</p>
                 </div>
+
+                <Image src={"/service-images/wave.svg"} alt="wave" width={500} height={500}  className="w-full absolute bottom-0 lg:bottom-[-200px] left-0 " />
             </section>
 
 

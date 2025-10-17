@@ -13,13 +13,15 @@ export default function Page() {
         <div className="bg-white">
 
             {/* about us hero section  */}
-            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative " style={{ backgroundImage: "url('/about-us/about-us-hero.webp')" }} >
+            <section className=" w-full h-screen bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative  overflow-hidden bg-fixed " style={{ backgroundImage: "url('/about-us/about-us-hero.webp')" }} >
                 <div className=" bg-black/55 absolute inset-0 h-full w-full " />
 
                 <div className=" flex flex-col gap-3 z-30 " >
                     <h2 className=" font-poppins text-4xl md:text-8xl font-bold  " >ABOUT US</h2>
                     <p className="font-signika  text-lg md:text-2xl max-w-2xl " >Discover the vision and mission driving innovation and collaboration at Lion Science Park.</p>
                 </div>
+
+                <Image src={"/service-images/wave.svg"} alt="wave" width={500} height={500}  className="w-full absolute bottom-0 lg:bottom-[-200px] left-0 " />
             </section>
 
 
@@ -27,7 +29,7 @@ export default function Page() {
             {/* Our Mission Section  */}
             <section className=" w-[95%] md:w-[80%] md:min-w-xl my-32 flex flex-col md:flex-row items-center justify-between gap-10 mx-auto  py-5 pb-20 border-b-2 border-[#008CC1] " >
 
-                <h3 className=" text-3xl md:text-4xl mb-2 font-semibold md:mb-4 text-[#008CC1] font-poppins" >Our Mission</h3>
+                <h3 className=" text-3xl md:text-4xl mb-2 font-semibold md:mb-4 text-[#008CC1] font-poppins relative before:content-[''] before:absolute before:left-[50%] before:bottom-[-7px] before:h-[3px] before:w-[30%] before:translate-x-[-50%] before:bg-[#008CC1]" >Our Mission</h3>
 
                 <div className="w-full max-w-5xl  text-black font-signika space-y-6 flex-1 " >
                     <p className="text-lg font-medium" >
@@ -69,7 +71,7 @@ export default function Page() {
 
             {/* What we Offer section  */}
             <section className=" w-full md:min-w-xl flex flex-col items-center gap-10  py-10 pb-20 px-[3%]  " >
-                <h3 className=" text-3xl md:text-4xl mb-2 font-semibold md:mb-4 text-[#008CC1] font-poppins">What We Offer</h3>
+                <h3 className=" text-3xl md:text-4xl mb-2 font-semibold md:mb-4 text-[#008CC1] font-poppins relative before:content-[''] before:absolute before:left-[50%] before:bottom-[-7px] before:h-[3px] before:w-[30%] before:translate-x-[-50%] before:bg-[#008CC1]">What We Offer</h3>
 
 
                 <div className="grid grid-cols-1  md:grid-cols-2   lg:grid-cols-3 place-items-center justify-items-center gap-6 " >
@@ -97,7 +99,7 @@ export default function Page() {
             {/* Benefits of LSP */}
             <section className="w-full md:min-w-xl flex flex-col items-center gap-10  py-20 px-[2%] " >
                 <div className="text-center my-12 " >
-                    <h3 className=" text-3xl md:text-4xl mb-2 font-semibold md:mb-4 text-[#008CC1] font-poppins">Benefits of LSP</h3>
+                    <h3 className=" text-3xl md:text-4xl mb-2 font-semibold md:mb-4 text-[#008CC1] font-poppins ">Benefits of LSP</h3>
                     <p className="font-signika  text-xl md:text-2xl max-w-4xl" >Being part of Lion Science Park means being part of a hot spot and a learning space. At Lion Science Park you will meet clients, partners and academic expertise in a vibrant environment where things happen – all the time.</p>
                 </div>
 
@@ -118,7 +120,7 @@ export default function Page() {
                                 transition={{ duration: 0.7, ease: "easeInOut" }}
                                 key={index} className=" w-full flex items-start gap-16  justify-around  border-[#008CC1] px-10  " >
 
-                                <div className=" w-[70px] h-[70px] rounded-full bg-[#008CC1]  items-center justify-center hidden md:flex " > {Icon && <Icon style={{ color: "#ffffff", fontSize: 40 }} />} </div>
+                                <div className=" w-[70px] h-[70px] rounded-full bg-[#008CC1]  items-center justify-center hidden md:flex drop-shadow-2xl " > {Icon && <Icon style={{ color: "#ffffff", fontSize: 40 }} />} </div>
 
                                 <div className="w-full max-w-6xl flex-1 " >
                                     <h5 className=" text-2xl md:text-3xl mb-2 font-semibold md:mb-4 text-[#008CC1] font-poppins">{data.title} </h5>

@@ -16,10 +16,10 @@ interface CardProps {
 
 const Card = ({ data }: CardProps) => {
     return (
-        <div className=" w-full max-w-xs md:max-w-md h-fit  flex flex-col items-center justify-between gap-3  group " >
+        <div className=" w-full max-w-xs md:max-w-md h-fit  flex flex-col items-center justify-between gap-3  group  cursor-pointer" >
 
-            <div className="  w-full flex items-center justify-center overflow-hidden rounded-md bg-gray-400 " >
-                <Image src={data.img} alt={`${data.title}-image`} width={500} height={500} className="object-cover object-center h-[300px] w-full group-hover:scale-125 transform transition-all duration-300 " />
+            <div className=" w-[280px] h-[280px] md:w-[350px] md:h-[350px] flex items-center justify-center overflow-hidden rounded-[50%] group-hover:rounded-[10px] bg-gray-400 transform transition-all duration-300 ease-in-out drop-shadow-2xl " >
+                <Image src={data.img} alt={`${data.title}-image`} width={500} height={500} className="object-cover object-center h-full w-full group-hover:scale-125 transform transition-all duration-300 ease-in-out " />
             </div>
             <div className=" w-full h-fit  px-2 md:px-6 py-4 md:py-10 " >
                 <h2 className=" text-2xl md:text-3xl font-semibold mb-1 md:mb-3 text-[#008CC1]" >{data.title} </h2>
