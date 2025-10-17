@@ -6,3 +6,13 @@ export interface FocusAreaType {
   description: string;
   img: string
 }
+
+
+export interface NewsBlogType {
+  id: number;
+  image: string;
+  title: string;
+  createdAt: Date;
+  content: string
+  publicationDate: Date
+}
