@@ -5,6 +5,8 @@ import { useParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import { supabase } from "../../../../../lib/supabaseClient"
 import Spinner from "@/components/UI/Spinner"
+import { Facebook } from "lucide-react"
+import { Instagram, LinkedIn, Twitter } from "@mui/icons-material"
 
 
 
@@ -37,7 +39,7 @@ export default function Page() {
 
 
     return (
-            <div className="bg-white w-full h-fit text-black" >
+        <div className="bg-white w-full h-fit text-black" >
 
             {!currentNews ? <div className="w-full h-screen flex items-center justify-center" > <Spinner /> </div>
                 :
@@ -59,7 +61,14 @@ export default function Page() {
 
                         <div className="w-full py-16 px-[3%] text-justify font-poppins font-medium text-lg bg-[#f2f5fc]  " dangerouslySetInnerHTML={{ __html: currentNews.content }} />
 
+                        <div className=" flex items-center gap-14 w-full py-16 px-[3%]   bg-[#f2f5fc]  " >
 
+                            <a href={currentNews.facebook_link} className="text-[#008CC1] cursor-pointer" > <Facebook size={32} /> </a>
+                            <a href={currentNews.insta_link} className="text-[#008CC1] cursor-pointer" > <Instagram fontSize={"large"} />  </a>
+                            <a href={currentNews.linkedin_link} className="text-[#008CC1] cursor-pointer" > <LinkedIn fontSize={"large"} /> </a>
+                            <a href={currentNews.x_link} className="text-[#008CC1] cursor-pointer"  > <Twitter fontSize={"large"} /> </a>
+
+                        </div>
 
                     </>
                 )

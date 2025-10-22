@@ -1,3 +1,20 @@
+"use client"
+
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
+
+
+// import required modules
+import { EffectFade, Autoplay } from 'swiper/modules';
 
 
 
@@ -7,10 +24,42 @@ export default function HeroSection() {
         <section className=" w-full h-screen relative flex items-center justify-center  bg-white font-poppins bg-no-repeat bg-center bg-cover bg-fixed " style={{ backgroundImage: "url('homepage-images/lsp-building.jpg')" }} >
 
 
-            <div className=" absolute top-0 left-0 h-full w-full bg-black/55 " />
+
+            <Swiper
+                spaceBetween={30}
+                effect="fade"
+                navigation={true}
+                speed={1000}
+                loop={true}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[EffectFade, Autoplay]}
+                className="mySwiper"
+            >
+                <SwiperSlide>
+                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </SwiperSlide>
+            </Swiper>
 
 
-            <div className="w-full h-full flex items-center justify-center flex-col gap-2 absolute top-0 left-0 text-center text-white " >
+            <div className=" absolute top-0 left-0 h-full w-full bg-black/55 z-30 " />
+
+
+            <div className="w-full h-full flex items-center justify-center flex-col gap-2 absolute top-0 left-0 text-center text-white  z-30" >
                 <h4 className="text-base md:text-xl font-semibold mb-2 font-signika   " >WELCOME TO</h4>
                 <h1 className="text-4xl md:text-8xl font-bold mb-4  ">Lion Science Park</h1>
                 <p className="text-lg md:text-2xl max-w-2xl font-signika " >Den of bright minds reshaping the future through innovation, collaboration, and groundbreaking discoveries.</p>
