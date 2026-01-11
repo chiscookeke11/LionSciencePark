@@ -85,32 +85,32 @@ export default function ContactUs() {
 
 
     return (
-        <section className=" w-full h-fit flex items-end pt-16 justify-center md:justify-start px-4 bg-no-repeat bg-center bg-cover font-poppins " style={{ backgroundImage: "url('/homepage-images/contactUs-bg.webp')" }} >
+        <section className=" w-full h-fit flex items-end py-16 justify-center md:justify-start px-4 bg-no-repeat bg-center bg-cover font-inter " style={{ backgroundImage: "url('/homepage-images/contactUs-bg.webp')" }} >
 
 
-            <form ref={formRef} onSubmit={handleSubmit} className="w-full max-w-md bg-white h-fit flex flex-col items-center gap-10 py-7 px-4 md:px-6 rounded-t-lg md:ml-44 " >
-                <h4 className=" font-semibold text-black text-xl md:text-3xl" >Contact Us</h4>
+            <form ref={formRef} onSubmit={handleSubmit} className="w-full max-w-md bg-white h-fit flex flex-col items-center gap-10 py-7 px-4 md:px-6 rounded-lg md:ml-44 border-2 border-black " >
+                <h4 className=" font-semibold font-onest text-black text-xl md:text-3xl" >Contact Us</h4>
 
 
                 <div className="w-full flex flex-col items-center gap-10 " >
                     <label htmlFor="fullname" className="w-full flex flex-col gap-1 items-start" >
                         <span className="text-sm font-semibold">Full Name</span>
-                        <input onChange={handleChange} value={formValues.fullName} type="text" name="fullName" id="fullname" placeholder="John Doe" className=" w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none text-base font-medium " />
+                        <input onChange={handleChange} value={formValues.fullName} type="text" name="fullName" id="fullname" placeholder="John Doe" className=" w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none focus:border-b-[#00BFA6] transition-all duration-75 ease-in-out text-base font-medium " />
                     </label>
 
                     <label htmlFor="email" className="w-full flex flex-col gap-1 items-start" >
                         <span className="text-sm font-semibold">Email</span>
-                        <input onChange={handleChange} value={formValues.email} type="email" name="email" id="email" placeholder="john@gmail.com" className=" w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none text-base font-medium" />
+                        <input onChange={handleChange} value={formValues.email} type="email" name="email" id="email" placeholder="john@gmail.com" className=" w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none text-base font-medium focus:border-b-[#00BFA6] transition-all duration-75 ease-in-out" />
                     </label>
 
                     <label htmlFor="phoneNumber" className="w-full  flex flex-col gap-1 items-start" >
                         <span className="text-sm font-semibold">Phone Number</span>
-                        <input onChange={handleChange} value={formValues.phoneNumber} type="text" name="phoneNumber" id="phoneNumber" placeholder="+273 5489 5403" className=" w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none text-base font-medium " />
+                        <input onChange={handleChange} value={formValues.phoneNumber} type="text" name="phoneNumber" id="phoneNumber" placeholder="+273 5489 5403" className=" w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none text-base font-medium focus:border-b-[#00BFA6] transition-all duration-75 ease-in-out " />
                     </label>
 
                     <label htmlFor="message" className="w-full  flex flex-col gap-1 items-start" >
                         <span className="text-sm font-semibold">Message</span>
-                        <textarea onChange={handleTextareaChange} value={formValues.message} rows={3} cols={4} name="message" id="message" className="w-full border-0 border-b-2 border-[#008CC1] py-2 outline-none focus:outline-none text-base font-medium" >
+                        <textarea onChange={handleTextareaChange} value={formValues.message} rows={3} cols={4} name="message" id="message" className="w-full border-0 border-b-2 border-[#008CC1] py-2 outline-none focus:outline-none text-base font-medium focus:border-b-[#00BFA6] transition-all duration-75 ease-in-out" >
 
                         </textarea>
                     </label>
@@ -118,7 +118,10 @@ export default function ContactUs() {
                 </div>
 
 
-                <button type="submit" disabled={loading} className=" flex items-center justify-center gap-4 bg-[#008CC1] py-4 px-5 text-white rounded-md cursor-pointer transform hover:scale-105 transition-all duration-300 " >Send Message {loading ? "..." : <Send size={18} />} </button>
+                 <div className=" w-[250px] h-[60px] relative flex items-center justify-center rounded-lg group " >
+                    <div className="bg-black w-full h-full absolute top-0 left-0 rounded-lg group-hover:left-2 group-hover:top-2 transition-all duration-300 ease-in-out "  ></div>
+                    <button type="submit" disabled={loading} className=" text-white  cursor-pointer  w-full h-full flex items-center justify-center gap-4 rounded-lg py-3 px-5 absolute top-0 left-0 font-semibold tracking-wider bg-[#00BFA6] group-hover:bg-[#008CC1] border-2 border-transparent group-hover:border-black transition-all duration-300 ease-in-out " > Send Message {loading ? "..." : <Send size={18} />}</button>
+                </div>
             </form>
         </section>
     )

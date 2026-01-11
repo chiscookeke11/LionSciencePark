@@ -1,4 +1,7 @@
+"use client"
+
 import AboutUs from "@/components/HomeComponents/AboutUs";
+import BlogSection from "@/components/HomeComponents/BlogSection";
 import ContactUs from "@/components/HomeComponents/ContactUs";
 import FocusAreas from "@/components/HomeComponents/FocusAreas";
 import HeroSection from "@/components/HomeComponents/HeroSection";
@@ -11,6 +14,7 @@ export default function Home() {
         <AboutUs/>
         <FocusAreas/>
         <OurPartners/>
+        <BlogSection/>
         <ContactUs/>
     </div>
     );

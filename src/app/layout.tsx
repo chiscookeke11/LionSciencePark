@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins, Signika } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Onest, Poppins, Signika } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
@@ -29,6 +29,16 @@ const signika = Signika({
   subsets: ["latin"]
 })
 
+const onest = Onest({
+  variable: "--font-onest",
+  subsets: ["latin"]
+})
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"]
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${signika.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${signika.variable} ${onest.variable} ${inter.variable} antialiased`}
       >
         <Toaster position="top-right" reverseOrder={false} />
         {children}

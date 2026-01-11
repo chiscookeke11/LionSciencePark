@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="w-full pt-20 pb-10 px-[3%] bg-[#081623] text-white flex flex-col items-center justify-center  gap-18 font-signika " >
+        <footer className="w-full pt-20 pb-10 px-[3%] bg-[#081623] text-white flex flex-col items-center justify-center  gap-18 font-inter " >
 
 
             <div className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 place-items-start justify-items-end h-full p-1" >
@@ -18,14 +18,14 @@ export default function Footer() {
 
 
                 <div className=" w-full p-1 flex flex-col items-start gap-4 " >
-                    <h4 className="text-xl font-poppins text-[#008CC1] " >Location</h4>
+                    <h4 className="text-xl font-onest text-[#008CC1] " >Location</h4>
                     <p className=" w-[90%] text-base  font-semibold text-gray-400 " >University of Nigeria, 1 Lion Science Park, Road, Nsukka, Enugu</p>
                 </div>
 
 
 
                 <div className=" w-full p-1 flex flex-col items-start gap-4 " >
-                    <h4 className="text-xl font-poppins text-[#008CC1]" >Links</h4>
+                    <h4 className="text-xl font-onest text-[#008CC1]" >Links</h4>
                     <ul className={`w-fit flex flex-col items-start gap-3  `} >
                         {navLinkData.map((navlink, index) => (
                             <li key={index} className=" text-sm   text-gray-400 hover:text-gray-200 transition-all duration-150" ><Link href={navlink.url} > {navlink.label}</Link> </li>
@@ -39,7 +39,7 @@ export default function Footer() {
 
 
                 <div className=" w-full p-1 flex flex-col items-start gap-4" >
-                    <h4 className="text-xl font-poppins text-[#008CC1]">Socials</h4>
+                    <h4 className="text-xl font-onest text-[#008CC1]">Socials</h4>
                     <ul className={`w-fit flex items-start gap-7  `} >
                         {socialsData.map((socialLink, index) => (
                             <li key={index} className=" text-sm  text-gray-400 hover:text-gray-200 transition-all duration-250 transform hover:scale-125 " >

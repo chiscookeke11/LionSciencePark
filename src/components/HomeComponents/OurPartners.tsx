@@ -6,13 +6,13 @@ import Marquee from "react-fast-marquee";
 
 export default function OurPartners() {
     return (
-        <section className="w-full bg-white flex flex-col items-center justify-center gap-10 py-18 px-3 font-poppins " >
-            <h2 className=" text-3xl md:text-4xl font-semibold text-black relative before:content-[''] before:absolute before:left-[50%] before:bottom-[-7px] before:h-[3px] before:w-[30%] before:translate-x-[-50%] before:bg-[#008CC1] ">Our Partners</ h2>
+        <section className="w-full bg-white flex flex-col items-center justify-center gap-10 py-28 px-3 font-inter border-t-2 border-b-2 border-black " >
+            <h2 className=" text-base md:text-xl font-semibold text-gray-500  ">Backed by leading industries</ h2>
 
             <div className=" hidden md:flex items-center justify-center gap-10 lg:gap-14 w-full " >
                 {
                     ourPartners.map((partner, index) => (
-                        <div title={partner.title} key={index} className="h-32 w-32 flex items-center justify-center" >
+                        <div title={partner.title} key={index} className="h-28 w-28 flex items-center justify-center" >
                             <Image src={partner.img} height={500} width={500} alt={`${partner.title}-image`} className="h-full w-full object-cover object-center " />
                         </div>
                     ))

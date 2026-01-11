@@ -27,7 +27,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="w-full  bg-transparent py-3 px-4 lg:px-10 lg:pr-20  flex items-center justify-between font-poppins absolute top-0 left-0 z-50  " >
+        <nav className="w-full  py-5 px-4 lg:px-[13%]   flex items-center justify-between font-inter  z-50 border-b-2 border-b-black bg-white  " >
             <Link href={"/"} >
                 <Image src={"/logo/LSP-logo-blue-removeBG.png"} alt="logo" height={10} width={150} className="w-[100px] h-[50px] md:w-[150px] md:h-[60px] object-center object-cover  " />
             </Link>
@@ -35,11 +35,21 @@ export default function Navbar() {
 
             <ul className="hidden lg:flex items-center gap-10  " >
                 {navLinkData.map((navlink, index) => (
-                    <li key={index} className={` font-medium text-base ${pathName === navlink.url ? "text-[#008CC1]" : "text-[var(--foreground)]"}  hover:text-[#008CC1] duration-300 ease-in-out transition-colors   `} ><Link href={navlink.url} className=""  >{navlink.label}</Link> </li>
+                    <li key={index} className={` font-medium text-base ${pathName === navlink.url ? "text-[#00BFA6]" : "text-black"}  hover:text-[#00BFA6] duration-300 ease-in-out transition-colors   `} ><Link href={navlink.url} className=""  >{navlink.label}</Link> </li>
                 ))}
             </ul>
 
-            <button className="text-[#008CC1] lg:hidden " onClick={() => setShowMobileMenu(true)} ><Menu size={33} /> </button>
+
+
+
+            <div className=" w-[200px] h-[60px] relative flex items-center justify-center rounded-xl group " >
+                <div className="bg-black w-full h-full absolute top-0 left-0 rounded-lg group-hover:left-2 group-hover:top-2 transition-all duration-300 ease-in-out "  ></div>
+                <button className=" text-white  font-inter cursor-pointer bg-[#008CC1] w-full h-full flex items-center justify-center rounded-lg py-3 px-5 absolute top-0 left-0 font-semibold tracking-wider group-hover:bg-[#00BFA6] border-2 border-transparent group-hover:border-black transition-all duration-300 ease-in-out " > Contact Us</button>
+            </div>
+
+
+
+            <button className="text-[#008CC1] lg:hidden  " onClick={() => setShowMobileMenu(true)} ><Menu size={33} /> </button>
 
 
 
