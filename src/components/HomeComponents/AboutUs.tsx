@@ -8,13 +8,13 @@ import { useRef } from "react";
 
 export default function AboutUs() {
 
-      const targetRef = useRef<HTMLDivElement>(null)
-      const { scrollYProgress } = useScroll({
+    const targetRef = useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({
         target: targetRef,
         offset: ["start end", "end start"],
-      })
+    })
 
-     const rotate = useTransform(scrollYProgress, [0, 1], [0, 180])
+    const rotate = useTransform(scrollYProgress, [0, 1], [0, 180])
 
     return (
         <section ref={targetRef} className="py-24 px-6 flex flex-col md:flex-row items-center justify-evenly gap-16 font-inter bg-[#008CC1] "  >
@@ -23,9 +23,9 @@ export default function AboutUs() {
 
 
             <div className=" h-[330px] w-[330px] lg:w-[600px] lg:h-[500px]  flex items-center justify-center relative    " >
-              <motion.div className="absolute -top-6 -right-10 z-20  " style={{rotate}} >
-                  <Image src={"/homepage-images/splater.avif"} alt='arrow-svg' height={70} width={70} />
-              </motion.div>
+                <motion.div className="absolute -top-4 md:-top-6 -right-7 md:-right-10 z-20   " style={{ rotate }} >
+                    <Image src={"/homepage-images/splater.avif"} alt='arrow-svg' height={70} width={70} className="w-[50] h-[50] md:w-[70] md:h-[70] " />
+                </motion.div>
                 <div className="w-full h-full bg-black absolute top-3 left-3 rounded-2xl " />
 
                 <Image src={"/homepage-images/ict.webp"} alt="image" height={500} width={500} className="w-full h-full object-center object-cover z-10 rounded-2xl" />

@@ -14,14 +14,14 @@ const Card = ({ data }: CardProps) => {
   return (
     <div className=" w-full h-full max-w-xs md:max-w-lg  flex flex-col items-center justify-between gap-3 group cursor-pointer border-2 border-black rounded-xl py-8 px-4 bg-white shrink-0 ">
       <div className="w-[280px] md:w-full aspect-square flex items-center justify-center overflow-hidden rounded-[10px] bg-gray-400 transform transition-all duration-300 ease-in-out drop-shadow-2xl">
-  <Image
-    src={data.img}
-    alt={`${data.title}-image`}
-    width={500}
-    height={500}
-    className="object-cover object-center w-full h-full group-hover:scale-125 transition-transform duration-300 ease-in-out"
-  />
-</div>
+        <Image
+          src={data.img}
+          alt={`${data.title}-image`}
+          width={500}
+          height={500}
+          className="object-cover object-center w-full h-full group-hover:scale-125 transition-transform duration-300 ease-in-out"
+        />
+      </div>
 
       <div className="w-full h-fit px-2 md:px-6 py-4 md:py-10">
         <h2 className="text-2xl md:text-3xl font-semibold font-onest mb-1 md:mb-3 text-[#008CC1]">
@@ -78,11 +78,11 @@ export default function FocusAreas() {
 
 
 
-       <div className="w-full h-fit grid grid-flow-col auto-cols-max gap-6 overflow-x-auto">
-  {FocusAreasData.map((area, index) => (
-    <Card data={area} key={index} />
-  ))}
-</div>
+        <div className="w-full h-fit grid grid-flow-col auto-cols-max gap-6 overflow-x-auto py-5">
+          {FocusAreasData.map((area, index) => (
+            <Card data={area} key={index} />
+          ))}
+        </div>
 
       </div>
 
