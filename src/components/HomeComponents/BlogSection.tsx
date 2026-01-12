@@ -30,7 +30,7 @@ export default function BlogSection() {
     return (
         <div className="w-full flex flex-col gap-14 items-center justify-center px-[4%] py-24 font-inter bg-[#008CC1] " >
 
-            <h2 className=" text-xl md:text-4xl font-bold font-onest " >Events & News</h2>
+            <h2 className=" text-3xl md:text-4xl font-bold font-onest text-white " >Events & News</h2>
 
             {!news ? (<div className="w-full h-[50vh] flex items-center justify-center " > <Spinner /> </div>)
                 : news.length < 1 ? (<div className="h-[50vh] w-full flex items-center justify-center px-5 py-4 font-poppins text-black font-medium text-2xl " > <p>No news found</p> </div>)
