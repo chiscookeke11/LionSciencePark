@@ -67,7 +67,7 @@ export default function Navbar() {
 
                  <div className=" w-[200px] h-[60px] relative flex items-center justify-center rounded-xl group " >
                 <div className="bg-black w-full h-full absolute top-0 left-0 rounded-lg group-hover:left-2 group-hover:top-2 transition-all duration-300 ease-in-out "  ></div>
-                <button className=" text-white  font-inter cursor-pointer bg-[#008CC1] w-full h-full flex items-center justify-center rounded-lg py-3 px-5 absolute top-0 left-0 font-semibold tracking-wider group-hover:bg-[#00BFA6] border-2 border-transparent group-hover:border-black transition-all duration-300 ease-in-out " > Contact Us</button>
+                <button className=" text-white  font-inter text-xl cursor-pointer bg-[#008CC1] w-full h-full flex items-center justify-center rounded-lg py-3 px-5 absolute top-0 left-0 font-semibold tracking-wider group-hover:bg-[#00BFA6] border-2 border-transparent group-hover:border-black transition-all duration-300 ease-in-out " > CONTACT US</button>
             </div>
             </div>
 
