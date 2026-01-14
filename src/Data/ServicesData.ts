@@ -1,4 +1,6 @@
-export const ServiceData = [
+import { ServiceDataType } from "@/Types/types";
+
+export const ServiceData: ServiceDataType[]  = [
     {
         title: "Working Space",
         description: "Lion Science Park offers flexible, smart office spaces designed for startups, companies, freelancers, and entrepreneurs. You can book a space daily, weekly, or monthly to suit your needs.",

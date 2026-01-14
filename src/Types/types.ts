@@ -19,3 +19,10 @@ export interface NewsBlogType {
         linkedin_link: string,
         x_link: string,
 }
+
+
+export interface ServiceDataType {
+  title: string;
+  description: string;
+  image: string
+}

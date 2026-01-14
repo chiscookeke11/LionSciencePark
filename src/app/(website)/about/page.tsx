@@ -60,13 +60,13 @@ export default function Page() {
             {/* The LSP vision section  */}
             <section className=" w-full  my-28 flex flex-col lg:flex-row items-center justify-center gap-10 md:gap-16 mx-auto  py-10 pb-36  px-[5%] border-b border-black  "  >
 
-                <div className="w-full lg:max-w-3xl font-medium text-xl text-black  space-y-7 text-start font-inter ">
+                <div className="w-full lg:max-w-3xl font-medium  text-black  space-y-7 text-start font-inter ">
                     <h3 className=" text-2xl md:text-4xl mb-2 font-semibold md:mb-4 text-[#008CC1]  font-onest">The LSP Vision</h3>
-                    <p className="leading-[170%]" >
+                    <p className="leading-[170%] text-lg" >
                         Lion Science Park (LSP), University of Nigeria is the first University-based Science Park in continental Africa. it is planned to be one of the most attractive and creative environments for research and learning, knowledge exchange, innovations, inventions, technology for the future and buisness networking. It is a domain where the smart minds converge, interact and exchange ideas to develop new start-ups, improve existing buisnesses as well as contribute positively to the future for sustainable development
                     </p>
 
-                    <p className="leading-[170%]">
+                    <p className="leading-[170%] text-lg">
                         It holds a unique triple helix research environment in which industry, government and academia collaborate closely in a shared ambition to drive innovation, creativity and buisness. LSP will operate according to plans, policies, programmes, practices and procedures that may vary from time to time due to Science, Technology and Innovation (STI) dynamics.
                     </p>
                 </div>
