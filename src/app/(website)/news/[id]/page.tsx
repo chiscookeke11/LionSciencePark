@@ -89,7 +89,7 @@ export default function Page() {
                     <>
                         <section className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-24 h-[70vh] px-[4%] md:px-[7%] bg-[#008CC1] border-b border-black " >
 
-                            <div className="  md:flex-1/2 flex items-center justify-center h-full bg-gray-300 w-full rounded-2xl border border-black overflow-hidden " >
+                            <div className="  md:flex-1/2 flex items-center justify-center h-[250px] md:h-full bg-gray-300 w-full rounded-2xl border border-black overflow-hidden " >
                                 <CldImage src={currentNews.image} alt="image" height={1500} width={1500} crop={{ type: "auto", source: true }} className="object-cover object-center h-full w-full " />
                             </div>
 
@@ -111,7 +111,7 @@ export default function Page() {
 
 
 
-                                <div className=" flex items-center gap-14 w-full  px-[3%]   bg-  " >
+                                <div className=" flex items-center gap-14 w-full  px-[3%]   mt-4  " >
                                     {currentNews.facebook_link && <a href={currentNews.facebook_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Facebook size={20} /> </a>}
                                     {currentNews.insta_link && <a href={currentNews.insta_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Instagram fontSize={"medium"} />  </a>}
                                     {currentNews.linkedin_link && <a href={currentNews.linkedin_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <LinkedIn fontSize={"medium"} /> </a>}
@@ -124,7 +124,7 @@ export default function Page() {
                         </section>
 
 
-                        <div className="w-full py-16 px-[3%] text-justify font-poppins font-medium text-lg bg-[#f2f5fc]  " dangerouslySetInnerHTML={{ __html: currentNews.content }} />
+                        <div className="w-full py-20 px-[3%] text-justify font-poppins font-medium text-lg bg-[#f2f5fc]  " dangerouslySetInnerHTML={{ __html: currentNews.content }} />
 
 
 
