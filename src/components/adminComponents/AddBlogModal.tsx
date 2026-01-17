@@ -182,7 +182,6 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
                             id="x_link"
                             placeholder="Post X link"
                             className="bg-transparent outline-none border-2 border-[#008CC1] shadow-none focus:shadow-0 py-2 px-3 h-fit focus:outline-none focus:ring-0 focus-visible:ring-0 text-[#1e1e1e] font-semibold text-base"
-                            required
                         />
                     </label>
 
@@ -196,7 +195,6 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
                             id="linkedin_link"
                             placeholder="Post LinkedIn link"
                             className="bg-transparent outline-none border-2 border-[#008CC1] shadow-none focus:shadow-0 py-2 px-3 h-fit focus:outline-none focus:ring-0 focus-visible:ring-0 text-[#1e1e1e] font-semibold text-base"
-                            required
                         />
                     </label>
 
@@ -211,7 +209,6 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
                             id="insta_link"
                             placeholder="Post Instagram link"
                             className="bg-transparent outline-none border-2 border-[#008CC1] shadow-none focus:shadow-0 py-2 px-3 h-fit focus:outline-none focus:ring-0 focus-visible:ring-0 text-[#1e1e1e] font-semibold text-base"
-                            required
                         />
                     </label>
 
@@ -227,7 +224,6 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
                             id="facebook_link"
                             placeholder="Post Facebook link"
                             className="bg-transparent outline-none border-2 border-[#008CC1] shadow-none focus:shadow-0 py-2 px-3 h-fit focus:outline-none focus:ring-0 focus-visible:ring-0 text-[#1e1e1e] font-semibold text-base"
-                            required
                         />
                     </label>
 

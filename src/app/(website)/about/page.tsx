@@ -3,7 +3,6 @@
 
 import { BenefitsData } from "@/Data/BenefitsData";
 import { OffersData } from "@/Data/OffersData";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 

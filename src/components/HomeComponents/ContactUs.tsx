@@ -85,7 +85,10 @@ export default function ContactUs() {
 
 
     return (
-        <section className=" w-full h-fit flex items-end py-16 justify-center md:justify-start px-4 bg-no-repeat bg-center bg-cover font-inter " style={{ backgroundImage: "url('/homepage-images/contactUs-bg.webp')" }} >
+        <section
+            id="contact-us"
+            className=" w-full h-fit flex items-end py-16 justify-center md:justify-start px-4 bg-no-repeat bg-center bg-cover font-inter "
+            style={{ backgroundImage: "url('/homepage-images/contactUs-bg.webp')" }} >
 
 
             <form ref={formRef} onSubmit={handleSubmit} className="w-full max-w-md bg-white h-fit flex flex-col items-center gap-10 py-7 px-4 md:px-6 rounded-lg md:ml-44 border-2 border-black " >
@@ -118,7 +121,7 @@ export default function ContactUs() {
                 </div>
 
 
-                 <div className=" w-[250px] h-[60px] relative flex items-center justify-center rounded-lg group " >
+                <div className=" w-[250px] h-[60px] relative flex items-center justify-center rounded-lg group " >
                     <div className="bg-black w-full h-full absolute top-0 left-0 rounded-lg group-hover:left-2 group-hover:top-2 transition-all duration-300 ease-in-out "  ></div>
                     <button type="submit" disabled={loading} className=" text-white  cursor-pointer  w-full h-full flex items-center justify-center gap-4 rounded-lg py-3 px-5 absolute top-0 left-0 font-semibold tracking-wider bg-[#00BFA6] group-hover:bg-[#008CC1] border-2 border-transparent group-hover:border-black transition-all duration-300 ease-in-out " > Send Message {loading ? "..." : <Send size={18} />}</button>
                 </div>

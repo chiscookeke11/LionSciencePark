@@ -7,6 +7,9 @@ import { supabase } from "../../../../../lib/supabaseClient"
 import Spinner from "@/components/UI/Spinner"
 import { Facebook } from "lucide-react"
 import { Instagram, LinkedIn, Twitter } from "@mui/icons-material"
+import Image from "next/image"
+import { CldImage } from "next-cloudinary"
+import NewsCard from "@/components/NewsComponents/NewsCard"
 
 
 
@@ -14,61 +17,139 @@ import { Instagram, LinkedIn, Twitter } from "@mui/icons-material"
 export default function Page() {
     const { id } = useParams()
     const [currentNews, setCurrentNews] = useState<NewsBlogType | null>(null)
+    const [news, setNews] = useState<NewsBlogType[] | null>(null)
 
 
-    useEffect(() => {
+
+
+    const fetchCurrentNews = async () => {
         if (!id) return;
 
-        const fetchCurrentNews = async () => {
-            const { data, error } = await supabase.from("news").select("*").eq('id', id).single()
+        const { data, error } = await supabase.from("news").select("*").eq('id', id).single()
 
 
-            if (error) {
-                console.error("Error fetching current News", error)
-            }
-
-            else {
-                setCurrentNews(data)
-                console.log(data)
-            }
+        if (error) {
+            console.error("Error fetching current News", error)
         }
 
+        else {
+            setCurrentNews(data)
+            console.log(data)
+        }
+    }
+
+
+
+
+    const fetchNews = async () => {
+        const { data, error } = await supabase.from('news').select("*")
+
+        if (error) {
+            console.error("Error fetching news")
+        }
+        else {
+            console.log(data)
+            setNews(data)
+        }
+    }
+
+    useEffect(() => {
+        fetchNews()
         fetchCurrentNews()
     }, [])
 
 
 
+
+    const getFirstSentence = (text: string) => {
+        if (!text) return "";
+
+        // Split the text into sentences using a regex that matches period, exclamation, or question marks
+        const sentences = text.match(/[^.!?]+[.!?]+/g);
+        // Take the first sentence
+        return sentences ? sentences[0].trim() : text;
+    };
+
+
+    if (!currentNews) {
+        return (
+            <div className="bg-white flex flex-col items-center justify-center gap-14 font-inter py-28 h-[40vh] px-[4%]" >
+                <h4 className=" text-3xl md:text-5xl font-semibold font-onest " >No news found</h4>
+            </div>
+        )
+    }
+
+
     return (
-        <div className="bg-white w-full h-fit text-black" >
+        <div className="bg-white w-full h-fit text-black font-inter" >
 
             {!currentNews ? <div className="w-full h-screen flex items-center justify-center" > <Spinner /> </div>
                 :
                 (
                     <>
-                        <section className="w-full h-screen relative  " style={{ backgroundImage: `url(${currentNews.image})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} >
-                            <div className="w-full h-full absolute inset-0 bg-gradient-to-b from-[rgba(4,9,30,0.5)] to-[rgba(4,9,30,0.5)] z-10 " />
+                        <section className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-24 h-[70vh] px-[4%] md:px-[7%] bg-[#008CC1] border-b border-black " >
 
-
-                            <div className="absolute bottom-3 left-0  py-10 text-white z-10 px-[3%] w-full flex flex-col md:flex-row items-start md:items-center md:justify-between gap-7  " >
-                                <div className="w-full basis-2/4 max-w-6xl flex flex-col items-start gap-4 " >
-                                    <h1 className=" font-syne text-3xl font-bold " >{currentNews.title} </h1>
-                                </div>
-
-
+                            <div className="  md:flex-1/2 flex items-center justify-center h-full bg-gray-300 w-full rounded-2xl border border-black overflow-hidden " >
+                                <CldImage src={currentNews.image} alt="image" height={1500} width={1500} crop={{ type: "auto", source: true }} className="object-cover object-center h-full w-full " />
                             </div>
+
+
+
+                            <div className="w-full md:flex-1/2 flex flex-col items-start gap-2 md:gap-5  " >
+                                <p className="self-start text-sm font-normal text-gray-900 " >
+                                    {currentNews.publicationDate
+                                        ? new Date(currentNews.publicationDate).toLocaleDateString("en-us", {
+                                            month: "long",
+                                            day: "numeric",
+                                            year: "numeric"
+                                        })
+                                        : "No date available"}
+                                </p>
+
+                                <h1 className=" text-2xl  md:text-4xl font-bold font-onest text-black " >{currentNews.title} </h1>
+                                <div dangerouslySetInnerHTML={{ __html: getFirstSentence(currentNews.content) }} className="flex items-center  text-lg md:text-xl font-medium text-start font-inter text-[#030100]  flex-wrap  " />
+
+
+
+                                <div className=" flex items-center gap-14 w-full  px-[3%]   bg-  " >
+                                    {currentNews.facebook_link && <a href={currentNews.facebook_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Facebook size={20} /> </a>}
+                                    {currentNews.insta_link && <a href={currentNews.insta_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Instagram fontSize={"medium"} />  </a>}
+                                    {currentNews.linkedin_link && <a href={currentNews.linkedin_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <LinkedIn fontSize={"medium"} /> </a>}
+                                    {currentNews.x_link && <a href={currentNews.x_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer"  > <Twitter fontSize={"medium"} /> </a>}
+
+                                </div>
+                            </div>
+
+
                         </section>
 
 
                         <div className="w-full py-16 px-[3%] text-justify font-poppins font-medium text-lg bg-[#f2f5fc]  " dangerouslySetInnerHTML={{ __html: currentNews.content }} />
 
-                        <div className=" flex items-center gap-14 w-full py-16 px-[3%]   bg-[#f2f5fc]  " >
 
-                            <a href={currentNews.facebook_link} className="text-[#008CC1] cursor-pointer" > <Facebook size={32} /> </a>
-                            <a href={currentNews.insta_link} className="text-[#008CC1] cursor-pointer" > <Instagram fontSize={"large"} />  </a>
-                            <a href={currentNews.linkedin_link} className="text-[#008CC1] cursor-pointer" > <LinkedIn fontSize={"large"} /> </a>
-                            <a href={currentNews.x_link} className="text-[#008CC1] cursor-pointer"  > <Twitter fontSize={"large"} /> </a>
 
+
+
+                        <div className="w-full flex flex-col gap-6 items-center justify-center px-[4%] py-24 font-inter bg-[#00BFA6] border border-black " >
+
+                            <h2 className=" text-3xl md:text-4xl font-bold font-onest text-[#030100] mr-auto ml-10 " >More News</h2>
+
+                            {!news ? (<div className="w-full h-[50vh] flex items-center justify-center " > <Spinner /> </div>)
+                                : news.length < 1 ? (<div className="h-[50vh] w-full flex items-center justify-center px-5 py-4 font-poppins text-black font-medium text-2xl " > <p>No news found</p> </div>)
+                                    : (
+                                        <>
+                                            {/* News section */}
+                                            < section className=" w-full px-[2%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-10 place-items-center justify-items-center justify-center " >
+                                                {news.map((data, i) => (
+                                                    <NewsCard data={data} key={i} />
+                                                ))}
+
+                                            </section>
+                                        </>
+                                    )
+                            }
                         </div>
+
 
                     </>
                 )
