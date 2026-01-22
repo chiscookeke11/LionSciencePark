@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import React from 'react';
+import { motion } from "framer-motion"
 
 
 
@@ -12,8 +13,28 @@ export default function HeroSection() {
         <section className=" w-full min-h-screen flex flex-col lg:flex-row items-center justify-center md:justify-between  bg-white gap-20 py-10 md:py-32 overflow-hidden pl-[8%] pr-[2%] font-inter " >
 
             <div className='w-full max-w-xl  flex flex-col gap-5 items-start ' >
-                <h4 className="text-3xl md:text-5xl font-bold font-onest  " >WELCOME TO LION SCIENCE PARK</h4>
-                <p className="text-lg md:text-2xl max-w-2xl font-inter " >Den of bright minds reshaping the future through innovation, collaboration, and groundbreaking discoveries.</p>
+                <h4 className="text-3xl md:text-5xl font-bold font-onest relative " >
+                    WELCOME TO LION SCIENCE PARK
+                    <motion.span
+                        initial={{ width: "100%" }}
+                        animate={{ width: 0 }}
+                        transition={{ duration: 0.4, ease: "easeInOut", delay: 0.2 }}
+                        className="  h-full bg-white absolute top-0 left-0 "
+                    >
+
+                    </motion.span>
+                </h4>
+
+                <p className="text-lg md:text-2xl max-w-2xl font-inter relative " >
+                    Den of bright minds reshaping the future through innovation, collaboration, and groundbreaking discoveries.
+                    <motion.span
+                        initial={{ width: "100%" }}
+                        animate={{ width: 0 }}
+                        transition={{ duration: 0.4, ease: "easeInOut", delay: 0.4 }}
+                        className="  h-full bg-white absolute top-0 left-0 " >
+
+                    </motion.span>
+                </p>
 
                 <div className=" w-[250px] h-[60px] relative flex items-center justify-center rounded-lg group " >
                     <div className="bg-black w-full h-full absolute top-0 left-0 rounded-lg group-hover:left-2 group-hover:top-2 transition-all duration-300 ease-in-out "  ></div>

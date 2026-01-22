@@ -13,7 +13,7 @@ export default function Page() {
         <div className="bg-white" >
             {/* Team hero section  */}
             <section className=" w-full h-[70vh] bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative  overflow-hidden bg-fixed " style={{ backgroundImage: "url('/team-images/team-meeting.png')" }} >
-                <div className=" bg-black/55 absolute inset-0 h-full w-full " />
+                <div className=" bg-black/50 absolute inset-0 h-full w-full " />
 
                 <div className=" flex flex-col gap-3 z-30 " >
                     <h2 className=" font-onest text-4xl md:text-8xl font-bold  " >Our Team</h2>

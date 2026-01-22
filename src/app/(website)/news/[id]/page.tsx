@@ -7,7 +7,6 @@ import { supabase } from "../../../../../lib/supabaseClient"
 import Spinner from "@/components/UI/Spinner"
 import { Facebook } from "lucide-react"
 import { Instagram, LinkedIn, Twitter } from "@mui/icons-material"
-import Image from "next/image"
 import { CldImage } from "next-cloudinary"
 import NewsCard from "@/components/NewsComponents/NewsCard"
 
@@ -71,13 +70,6 @@ export default function Page() {
     };
 
 
-    if (!currentNews) {
-        return (
-            <div className="bg-white flex flex-col items-center justify-center gap-14 font-inter py-28 h-[40vh] px-[4%]" >
-                <h4 className=" text-3xl md:text-5xl font-semibold font-onest " >No news found</h4>
-            </div>
-        )
-    }
 
 
     return (
@@ -87,7 +79,7 @@ export default function Page() {
                 :
                 (
                     <>
-                        <section className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-24 h-[70vh] px-[4%] md:px-[7%] bg-[#008CC1] border-b border-black " >
+                        <section className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-24 h-[80vh] px-[4%] md:px-[7%] bg-[#008CC1] border-b border-black " >
 
                             <div className="  md:flex-1/2 flex items-center justify-center h-[250px] md:h-full bg-gray-300 w-full rounded-2xl border border-black overflow-hidden " >
                                 <CldImage src={currentNews.image} alt="image" height={1500} width={1500} crop={{ type: "auto", source: true }} className="object-cover object-center h-full w-full " />
@@ -124,7 +116,7 @@ export default function Page() {
                         </section>
 
 
-                        <div className="w-full py-20 px-[3%] text-justify font-poppins font-medium text-lg bg-[#f2f5fc]  " dangerouslySetInnerHTML={{ __html: currentNews.content }} />
+                        <div className="w-full py-28 px-[3%] text-justify font-poppins font-medium text-base md:text-lg bg-[#f2f5fc]  " dangerouslySetInnerHTML={{ __html: currentNews.content }} />
 
 
 
