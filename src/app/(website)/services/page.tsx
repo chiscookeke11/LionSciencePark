@@ -1,7 +1,14 @@
 import FlipCard from "@/components/UI/FlipCard";
 import { ServiceData } from "@/Data/ServicesData";
+import { Metadata } from "next";
 import Image from "next/image";
 
+
+export const metadata: Metadata = {
+    title: "Our Services | Lion Science Park",
+    description:
+        "Discover the range of services offered at Lion Science Park, including innovation support, research facilities, technology development, incubation programs, and collaborative solutions for startups and organizations."
+};
 
 
 export default function Page() {

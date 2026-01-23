@@ -12,7 +12,8 @@ export interface NewsBlogType {
   id?: string;
   image: string;
   title: string;
-  content: string
+  content: string,
+  slug?: string,
   publicationDate: Date | null,
   facebook_link: string,
    insta_link: string,

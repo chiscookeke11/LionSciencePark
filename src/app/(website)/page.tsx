@@ -1,21 +1,17 @@
-"use client"
+import HomePage from "@/components/HomeComponents/HomePage";
+import { Metadata } from "next";
 
-import AboutUs from "@/components/HomeComponents/AboutUs";
-import BlogSection from "@/components/HomeComponents/BlogSection";
-import ContactUs from "@/components/HomeComponents/ContactUs";
-import FocusAreas from "@/components/HomeComponents/FocusAreas";
-import HeroSection from "@/components/HomeComponents/HeroSection";
-import OurPartners from "@/components/HomeComponents/OurPartners";
 
-export default function Home() {
+
+export const metadata: Metadata = {
+  title: "Lion Science Park",
+  description:
+    "Lion Science Park is a center for innovation, scientific research, and technology development, empowering startups, researchers, and innovators to build solutions for the future."
+};
+
+
+export default function Page() {
   return (
-    <div className="bg-white "   >
-        <HeroSection/>
-        <AboutUs/>
-        <FocusAreas/>
-        <OurPartners/>
-        <BlogSection/>
-        <ContactUs/>
-    </div>
-    );
+    <HomePage />
+  )
 }

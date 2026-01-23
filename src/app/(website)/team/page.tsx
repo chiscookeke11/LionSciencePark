@@ -1,11 +1,16 @@
 import { TeamData } from "@/Data/TeamData";
 import { Facebook, LinkedIn } from "@mui/icons-material";
 import { Mail } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 
 
 
-
+export const metadata: Metadata = {
+    title: "Our Team | Lion Science Park",
+    description:
+        "Meet the leadership, innovators, researchers, and professionals driving innovation and growth at Lion Science Park through science, technology, and collaboration."
+};
 
 
 export default function Page() {
