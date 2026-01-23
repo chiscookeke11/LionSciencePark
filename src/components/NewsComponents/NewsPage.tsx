@@ -128,7 +128,7 @@ export default function NewsPage() {
                         <>
                             {/* News section */}
                             <section className=" w-full max-w-7xl px-[3%] py-20 flex flex-col items-center gap-10 " >
-                                <h3 className="text-3xl md:text-5xl font-semibold text-[#030100] font-onest mr-auto " >All News posts</h3>
+                                <h3 className="text-3xl md:text-5xl font-semibold text-[#030100] font-onest mr-auto " >All News Posts</h3>
                                 < div className=" w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 place-items-center justify-items-center justify-center " >
                                     {news.map((data, i) => (
                                         <NewsCard data={data} key={i} />
