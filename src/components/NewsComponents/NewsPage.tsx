@@ -87,7 +87,7 @@ export default function NewsPage() {
             </div>
 
             {/* The news page hero news-card */}
-            <Link href={`/news/${latestNews?.slug}`} className="w-full h-[430px] md:h-[530px] max-w-6xl  min-h-[300px]   rounded-xl  border-2 border-black relative z-0 group " >
+            <Link href={`/news/${latestNews?.id}`} className="w-full h-[430px] md:h-[530px] max-w-6xl  min-h-[300px]   rounded-xl  border-2 border-black relative z-0 group " >
 
                 <div className="w-full h-full absolute top-2 left-1.5 bg-black rounded-xl z-0 hidden group-hover:block transition-all duration-300 ease-in-out  " />
 

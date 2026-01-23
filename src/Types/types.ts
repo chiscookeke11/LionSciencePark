@@ -16,9 +16,9 @@ export interface NewsBlogType {
   slug?: string,
   publicationDate: Date | null,
   facebook_link: string,
-   insta_link: string,
-        linkedin_link: string,
-        x_link: string,
+  instagram_link: string,
+  linkedin_link: string,
+  x_link: string,
 }
 
 

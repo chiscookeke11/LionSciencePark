@@ -24,7 +24,7 @@ export default function UpdateBlogModal({
         title: "",
         content: "",
         facebook_link: "",
-        insta_link: "",
+        instagram_link: "",
         linkedin_link: "",
         x_link: "",
         publicationDate: null,
@@ -111,7 +111,7 @@ export default function UpdateBlogModal({
                     title: formValues.title,
                     content: formValues.content,
                     facebook_link: formValues.facebook_link,
-                    instagram_link: formValues.insta_link,
+                    instagram_link: formValues.instagram_link,
                     linkedin_link: formValues.linkedin_link,
                     x_link: formValues.x_link,
                     image: imageUrl,
@@ -242,7 +242,7 @@ export default function UpdateBlogModal({
                             Instagram link
                         </span>
                         <input
-                            value={formValues.insta_link ?? ""}
+                            value={formValues.instagram_link ?? ""}
                             name="insta_link"
                             onChange={handleChange}
                             id="insta_link"

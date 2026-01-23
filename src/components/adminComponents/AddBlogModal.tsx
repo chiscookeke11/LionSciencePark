@@ -19,7 +19,7 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
         title: "",
         content: "",
         facebook_link: "",
-        insta_link: "",
+        instagram_link: "",
         linkedin_link: "",
         x_link: "",
         publicationDate: null,
@@ -88,7 +88,11 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
                 title: formValues.title,
                 content: formValues.content,
                 image: imageUrl,
-                publicationDate: new Date().toISOString()
+                publicationDate: new Date().toISOString(),
+                instagram_link: formValues.instagram_link,
+                facebook_link: formValues.facebook_link,
+                x_link: formValues.x_link,
+                linkedin_link: formValues.linkedin_link
             }).select()
 
             if (error) {
@@ -106,7 +110,7 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
                 title: "",
                 content: "",
                 facebook_link: "",
-                insta_link: "",
+                instagram_link: "",
                 linkedin_link: "",
                 x_link: "",
                 image: "",
@@ -203,7 +207,7 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
                     <label htmlFor="insta_link" className="w-full flex flex-col gap-1">
                         <span className="text-lg font-semibold text-[#008CC1]">Instagram link</span>
                         <input
-                            value={formValues.insta_link}
+                            value={formValues.instagram_link}
                             name="insta_link"
                             onChange={handleChange}
                             id="insta_link"
@@ -240,7 +244,7 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
                         type="button"
                         className="border-[#008CC1] text-[#008CC1] hover:bg-red-400 transition-all duration-300 bg-transparent cursor-pointer py-3 px-6 h-fit"
                         onClick={() => {
-                            setFormValues({ title: "", facebook_link: "", insta_link: "", linkedin_link: "", x_link: "", content: "", publicationDate: null, image: '' })
+                            setFormValues({ title: "", facebook_link: "", instagram_link: "", linkedin_link: "", x_link: "", content: "", publicationDate: null, image: '' })
                             setFile(null)
                         }}
                     >

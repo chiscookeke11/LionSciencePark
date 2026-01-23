@@ -38,7 +38,7 @@ export default function BlogSection() {
                         <>
                             {/* News section */}
                             < section className=" w-full px-[2%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-10 place-items-center justify-items-center justify-center " >
-                                {news.map((data, i) => (
+                                {news.slice(0, 3).map((data, i) => (
                                     <NewsCard data={data} key={i} />
                                 ))}
 

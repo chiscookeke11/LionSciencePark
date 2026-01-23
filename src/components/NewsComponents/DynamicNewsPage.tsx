@@ -79,7 +79,7 @@ export default function Page() {
                 :
                 (
                     <>
-                        <section className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-24 h-[80vh] px-[4%] md:px-[7%] bg-[#008CC1] border-b border-black " >
+                        <section className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-24 h-[90vh] px-[4%] md:px-[7%] bg-[#008CC1] border-b border-black " >
 
                             <div className="  md:flex-1/2 flex items-center justify-center h-[250px] md:h-full bg-gray-300 w-full rounded-2xl border border-black overflow-hidden " >
                                 <CldImage src={currentNews.image} alt="image" height={1500} width={1500} crop={{ type: "auto", source: true }} className="object-cover object-center h-full w-full " />
@@ -105,7 +105,7 @@ export default function Page() {
 
                                 <div className=" flex items-center gap-14 w-full  px-[3%]   mt-4  " >
                                     {currentNews.facebook_link && <a href={currentNews.facebook_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Facebook size={20} /> </a>}
-                                    {currentNews.insta_link && <a href={currentNews.insta_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Instagram fontSize={"medium"} />  </a>}
+                                    {currentNews.instagram_link && <a href={currentNews.instagram_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Instagram fontSize={"medium"} />  </a>}
                                     {currentNews.linkedin_link && <a href={currentNews.linkedin_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <LinkedIn fontSize={"medium"} /> </a>}
                                     {currentNews.x_link && <a href={currentNews.x_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer"  > <Twitter fontSize={"medium"} /> </a>}
 
@@ -134,7 +134,7 @@ export default function Page() {
                                         <>
                                             {/* News section */}
                                             < section className=" w-full px-[2%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-10 place-items-center justify-items-center justify-center " >
-                                                {news.map((data, i) => (
+                                                {news.slice(0, 3).map((data, i) => (
                                                     <NewsCard data={data} key={i} />
                                                 ))}
 
