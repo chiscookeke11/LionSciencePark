@@ -52,12 +52,17 @@ export default function HeroSection() {
             </div>
 
 
-            <div className='w-[300px] h-[300px]  md:w-full md:h-full aspect-square md:aspect-auto max-w-xs md:max-w-xl lg:max-w-2xl flex items-center justify-center  -rotate-8 relative  ' >
-                <Image src={"/homepage-images/arrow-svg.svg"} alt='arrow-svg' height={100} width={100} className='absolute -top-10 -left-12 md:-left-18 h-[80px] w-[80px] md:h-[100px] md:w-[100px] ' />
+            <motion.div
+                className='w-[300px] h-[300px]  md:w-full md:h-full aspect-square md:aspect-auto max-w-xs md:max-w-xl lg:max-w-2xl flex items-center justify-center relative  '
+                initial={{ rotate: 0, opacity: 0 }}
+                animate={{ rotate: -8, opacity: 100 }}
+                transition={{ duration: 0.4, ease: "easeInOut", delay: 0.9 }}
+            >
+                <Image src={"/home`page-images/arrow-svg.svg"} alt='arrow-svg' height={100} width={100} className='absolute -top-10 -left-12 md:-left-18 h-[80px] w-[80px] md:h-[100px] md:w-[100px] ' />
                 <div className='w-full h-full md:h-[550px] border-dashed border-2 border-black rounded-md overflow-hidden z-10 ' >
                     <Image src={"/homepage-images/image.jpg"} alt='The building image' height={1000} width={1000} priority className='w-full h-full object-center object-cover  ' />
                 </div>
-            </div>
+            </motion.div>
 
 
 
