@@ -23,8 +23,8 @@ export default function AboutUs() {
 
 
             <div className=" h-[330px] w-[330px] lg:w-[600px] lg:h-[500px]  flex items-center justify-center relative    " >
-                <motion.div className="absolute -top-4 md:-top-6 -right-7 md:-right-10 z-20   " style={{ rotate }} >
-                    <Image src={"/homepage-images/splater.avif"} alt='arrow-svg' height={70} width={70} className="w-[50] h-[50] md:w-[70] md:h-[70] " />
+                <motion.div className="absolute -top-3 md:-top-6 -right-6 md:-right-10 z-20   " style={{ rotate }} >
+                    <Image src={"/homepage-images/splater.avif"} alt='arrow-svg' height={70} width={70} className="w-[40] h-[40] md:w-[70] md:h-[70] " />
                 </motion.div>
                 <div className="w-full h-full bg-black absolute top-3 left-3 rounded-2xl " />
 
