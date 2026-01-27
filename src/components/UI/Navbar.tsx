@@ -20,7 +20,9 @@ export default function Navbar() {
 
     useEffect(() => {
         document.body.style.overflowY = showMobileMenu ? "hidden" : "auto"
-    }, [])
+
+        return () => { document.body.style.overflowY = "auto" }
+    }, [showMobileMenu])
 
 
 
