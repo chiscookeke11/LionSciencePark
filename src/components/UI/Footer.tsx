@@ -31,7 +31,7 @@ export default function Footer() {
                             <li key={index} className=" text-sm   text-gray-400 hover:text-gray-200 transition-all duration-150" ><Link href={navlink.url} > {navlink.label}</Link> </li>
                         ))}
 
-                        <li className=" text-sm   text-gray-400 hover:text-gray-200 transition-all duration-150" ><Link href={"/admin"} > Admin </Link> </li>
+                        {/* <li className=" text-sm   text-gray-400 hover:text-gray-200 transition-all duration-150" ><Link href={"/admin"} > Admin </Link> </li> */}
                     </ul>
                 </div>
 
