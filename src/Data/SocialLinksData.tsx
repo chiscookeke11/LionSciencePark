@@ -19,7 +19,7 @@ export const socialsData = [
     },
     {
         name: "Email",
-        url: "mailto:enquiries@lionsciencepark.com",
+        url: "mailto:info@lionsciencepark.com",
         icon: <Mail size={20} />
     }
 ]
