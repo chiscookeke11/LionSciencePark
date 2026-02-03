@@ -24,7 +24,7 @@ export default function NewsPage() {
         const { data, error } = await supabase.from('news').select("*").order("publicationDate", { ascending: false })
 
         if (error) {
-            console.error("Error fetching news:", error.message)
+            console.error("Error fetching news:")
             setNews([])
         } else {
             setNews(data || [])
@@ -38,7 +38,7 @@ export default function NewsPage() {
         const { data, error } = await supabase.from('news').select("*").order("publicationDate", { ascending: false }).limit(1);
 
         if (error) {
-            console.error("Error fetching latest news:", error.message)
+            console.error("Error fetching latest news:")
             setLatestNews(null)
             setLoadingHero(false)
         } else {

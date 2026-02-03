@@ -28,12 +28,11 @@ export default function Page() {
 
 
         if (error) {
-            console.error("Error fetching current News", error)
+            console.error("Error fetching current News")
         }
 
         else {
             setCurrentNews(data)
-            console.log(data)
         }
     }
 

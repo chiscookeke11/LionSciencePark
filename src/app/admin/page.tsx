@@ -29,7 +29,6 @@ export default function Page() {
             console.error("Error fetching news")
         }
         else {
-            console.log(data)
             setNews(data)
         }
     }

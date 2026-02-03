@@ -18,7 +18,6 @@ export default function BlogSection() {
             console.error("Error fetching news")
         }
         else {
-            console.log(data)
             setNews(data)
         }
     }

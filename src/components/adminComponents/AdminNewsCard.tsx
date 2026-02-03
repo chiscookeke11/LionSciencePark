@@ -17,7 +17,7 @@ interface AdminNewsCardProps {
 
 export default function AdminNewsCard({ data, showOptionsIndex, setConfirmDeleteModal, setSelectedIndex, setShowEditBlogModal, setShowOptionsIndex }: AdminNewsCardProps) {
     return (
-        <div className="w-full h-full max-w-xs  md:max-w-none min-h-[300px] flex flex-col items-center justify-between font-poppins relative  overflow-hidden" >
+        <div className="w-full h-full max-w-[280px]  md:max-w-none min-h-[300px] flex flex-col items-center justify-between font-poppins relative  overflow-hidden text-[#0a0a0a] " >
 
 
             <div className=" w-full bg-gray-300 h-full " >
@@ -42,7 +42,7 @@ export default function AdminNewsCard({ data, showOptionsIndex, setConfirmDelete
                     e.stopPropagation()
                     e.preventDefault()
                     setShowOptionsIndex?.((prev: string | null) => (prev === data.id ? null : data.id ?? ""))
-                    console.log("the index", data.id)
+                    // console.log("the index", data.id)
                 }}
                 className="absolute top-2 right-2 cursor-pointer bg-white rounded-md p-4  " ><EllipsisVertical size={28} color="#008CC1" /> </button>
 

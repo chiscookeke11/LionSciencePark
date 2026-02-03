@@ -45,7 +45,7 @@ export default function UpdateBlogModal({
                 .single()
 
             if (error) {
-                console.error(error)
+                // console.error(error)
                 toast.error("Error fetching blog data")
             } else {
                 setSelectedBlog(data)
@@ -123,7 +123,7 @@ export default function UpdateBlogModal({
 
             if (error) {
                 toast.error(error.message)
-                console.error(error)
+                // console.error(error)
                 return
             }
 
@@ -132,7 +132,7 @@ export default function UpdateBlogModal({
             toast.success("Blog updated successfully!")
             setShowEditBlogModal(false)
         } catch (error) {
-            console.error(error)
+            // console.error(error)
             toast.error("Failed to update blog")
         } finally {
             setLoading(false)

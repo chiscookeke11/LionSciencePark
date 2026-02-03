@@ -62,7 +62,7 @@ export default function ContactUs() {
         )
             .then(
                 (result) => {
-                    console.log(result.text);
+                    // console.log(result.text);
                     toast.success("Message sent successfully!");
                     setLoading(false)
                     setFormValues({

@@ -42,7 +42,7 @@ export default function ConfirmDelete({
       onDelete?.(id);
       setConfirmDeleteModal?.(false);
     } catch (err) {
-      console.error(err);
+      // console.error(err);
       toast.error("Failed to delete blog!")
       toast.dismiss(toastId);
     }

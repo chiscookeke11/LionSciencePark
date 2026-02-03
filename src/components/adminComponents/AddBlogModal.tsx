@@ -122,7 +122,7 @@ export default function AddBlogModal({ setOpenBlogModal, addBlogToUI }: AddBlogM
 
 
         } catch (error) {
-            console.error("Failed to submit blog", error)
+            console.error("Failed to submit blog")
             if (error instanceof Error) {
                 toast.error(`Failed to add blog: ${error.message}`)
             } else {

@@ -11,7 +11,7 @@ export default function AuthModal() {
       },
     });
 
-    if (error) console.error("Google login failed:", error.message);
+    if (error) console.error("Google login failed:");
   };
 
   return (
