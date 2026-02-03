@@ -6,6 +6,7 @@ import TiptapEditor from "./TipTapEditor"
 import Spinner from "../UI/Spinner"
 import { supabase } from "../../../lib/supabaseClient"
 import { NewsBlogType } from "@/Types/types"
+import Image from "next/image"
 
 interface UpdateBlogModalProps {
     setShowEditBlogModal: React.Dispatch<React.SetStateAction<boolean>>
@@ -185,9 +186,11 @@ export default function UpdateBlogModal({
                         <span className="text-sm text-gray-600">Selected: {file.name}</span>
                     ) : (
                         formValues.image && (
-                            <img
+                            <Image
                                 src={formValues.image}
                                 alt="Current blog"
+                                height={500}
+                                width={500}
                                 className="mt-2 w-32 h-20 object-cover rounded-md border"
                             />
                         )
