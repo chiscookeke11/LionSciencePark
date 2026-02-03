@@ -50,7 +50,7 @@ export default function Page() {
 
                         <div className="w-full  flex flex-col pt-7  gap-6" >
                             <div className="px-5 flex flex-col items-center justify-center gap-1 " >
-                                <h5 className=" font-onest text-xl font-semibold text-center  " >  {data.name} </h5>
+                                <h5 className=" font-onest text-xl font-semibold text-center text-[#0a0a0a] " >  {data.name} </h5>
                                 <p className=" font-medium text-lg font-inter text-[#008CC1] text-center" >{data.position} </p>
                             </div>
 

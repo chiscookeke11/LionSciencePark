@@ -22,7 +22,7 @@ export default function AboutUs() {
 
 
 
-            <div className=" h-[330px] w-[330px] lg:w-[600px] lg:h-[500px]  flex items-center justify-center relative    " >
+            <div className=" h-[280px] w-[280px] lg:w-[600px] lg:h-[500px]  flex items-center justify-center relative    " >
                 <motion.div className="absolute -top-3 md:-top-6 -right-6 md:-right-10 z-20   " style={{ rotate }} >
                     <Image src={"/homepage-images/splater.avif"} alt='arrow-svg' height={70} width={70} className="w-[40] h-[40] md:w-[70] md:h-[70] " />
                 </motion.div>
@@ -35,7 +35,7 @@ export default function AboutUs() {
 
             <div className="w-full max-w-2xl text-start " >
                 <h2 className=" text-3xl md:text-4xl mb-2 font-semibold md:mb-4 text-white font-onest " >About Us</h2>
-                <p className=" font-medium text-xl text-black ">Lion Science Park (LSP) is the first university-based science park in Africa, established at the University of Nigeria, Nsukka (UNN). We serve as a hub where academia, industry, and government converge to drive innovation, research, and entrepreneurship.
+                <p className=" font-medium text-base md:text-xl text-black ">Lion Science Park (LSP) is the first university-based science park in Africa, established at the University of Nigeria, Nsukka (UNN). We serve as a hub where academia, industry, and government converge to drive innovation, research, and entrepreneurship.
                     <br />
                     <br />
 

@@ -27,7 +27,7 @@ const Card = ({ data }: CardProps) => {
         <h2 className="text-2xl md:text-3xl font-semibold font-onest mb-1 md:mb-3 text-[#008CC1]">
           {data.title}
         </h2>
-        <p className="font-medium text-lg ">{data.description}</p>
+        <p className="font-medium text-base md:text-lg text-[#0a0a0a] ">{data.description}</p>
       </div>
     </div>
   )

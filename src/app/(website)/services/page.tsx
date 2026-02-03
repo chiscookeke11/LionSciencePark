@@ -1,4 +1,5 @@
 import FlipCard from "@/components/UI/FlipCard";
+import { MobileServiceCard } from "@/components/UI/MobileFlipCard";
 import { ServiceData } from "@/Data/ServicesData";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -16,7 +17,7 @@ export default function Page() {
         <div className="bg-white font-inter" >
 
             {/* service hero section  */}
-            <section className=" w-full h-[70vh] bg-black flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative overflow-hidden bg-fixed " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
+            <section className=" w-full h-[70vh] bg-black  flex items-center justify-center flex-col gap-4 text-white  py-4 px-3 text-center bg-no-repeat bg-center bg-cover relative overflow-hidden bg-fixed " style={{ backgroundImage: "url('/about-us/side.webp')" }} >
                 <div className=" bg-black/45 absolute inset-0 h-full w-full " />
 
                 <div className=" flex flex-col gap-3 z-30 " >
@@ -39,7 +40,10 @@ export default function Page() {
 
                 {ServiceData.map((data, i) => (
 
+                   <>
                     <FlipCard key={i} data={data} />
+                    <MobileServiceCard key={i} data={data} />
+                   </>
                 ))}
 
 

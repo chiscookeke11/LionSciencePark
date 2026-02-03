@@ -13,7 +13,7 @@ export default function HeroSection() {
     return (
         <section className=" w-full min-h-screen flex flex-col lg:flex-row items-center justify-center md:justify-between  bg-white gap-20 py-10 md:py-32 overflow-hidden pl-[8%] pr-[2%] font-inter " >
 
-            <div className='w-full max-w-xl  flex flex-col gap-5 items-start ' >
+            <div className='w-full max-w-xl  flex flex-col gap-5 items-start text-[#0a0a0a] ' >
                 <h4 className="text-3xl md:text-5xl font-bold font-onest relative " >
                     WELCOME TO LION SCIENCE PARK
                     <motion.span
@@ -26,7 +26,7 @@ export default function HeroSection() {
                     </motion.span>
                 </h4>
 
-                <p className="text-lg md:text-2xl max-w-2xl font-inter relative " >
+                <p className="text-lg md:text-2xl max-w-2xl font-inter relative text-[#0a0a0a] " >
                     Den of bright minds reshaping the future through innovation, collaboration, and groundbreaking discoveries.
                     <motion.span
                         initial={{ width: "100%" }}
@@ -53,7 +53,7 @@ export default function HeroSection() {
 
 
             <motion.div
-                className='w-[300px] h-[300px]  md:w-full md:h-full aspect-square md:aspect-auto max-w-xs md:max-w-xl lg:max-w-2xl flex items-center justify-center relative  '
+                className='w-[280px] h-[280px]  md:w-full md:h-full aspect-square md:aspect-auto max-w-xs md:max-w-xl lg:max-w-2xl flex items-center justify-center relative  '
                 initial={{ rotate: 0, opacity: 0 }}
                 animate={{ rotate: -8, opacity: 100 }}
                 transition={{ duration: 0.4, ease: "easeInOut", delay: 0.9 }}

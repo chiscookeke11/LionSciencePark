@@ -22,5 +22,9 @@ export const navLinkData = [
         label: "NEWS",
         url: "/news"
     },
+    {
+        label: "OUR TENANTS",
+        url: "/our-tenants"
+    },
 
 ]

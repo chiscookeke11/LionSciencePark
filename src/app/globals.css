@@ -79,6 +79,7 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  color: #0a0a0a;
 }
 
 .flip-card-front {

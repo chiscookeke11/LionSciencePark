@@ -29,7 +29,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="w-full  py-5 px-4 lg:px-[13%]   flex items-center justify-between font-inter  z-50 border-b border-b-black bg-white  " >
+        <nav className="w-full  py-3 md:py-5 px-4 lg:px-[13%]   flex items-center justify-between font-inter  z-50 border-b border-b-black bg-white  " >
             <Link href={"/"} >
                 <Image src={"/logo/LSP-logo-blue-removeBG.png"} alt="logo" height={10} width={150} className="w-[100px] h-[50px] md:w-[150px] md:h-[60px] object-center object-cover  " />
             </Link>
@@ -64,7 +64,7 @@ export default function Navbar() {
 
                 <ul className="flex flex-col items-start gap-10  " >
                     {navLinkData.map((navlink, index) => (
-                        <li key={index} className={` font-medium text-xl ${pathName === navlink.url ? "text-[#008CC1]" : "text-[var(--foreground)]"}  hover:text-[#008CC1] duration-300 ease-in-out transition-colors    `} ><Link href={navlink.url} onClick={() => setShowMobileMenu(false)}  >{navlink.label}</Link> </li>
+                        <li key={index} className={` font-medium text-lg ${pathName === navlink.url ? "text-[#008CC1]" : "text-white"}  hover:text-[#008CC1] duration-300 ease-in-out transition-colors    `} ><Link href={navlink.url} onClick={() => setShowMobileMenu(false)}  >{navlink.label}</Link> </li>
                     ))}
                 </ul>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
                             onClick={() => {
                                 setShowMobileMenu(false);
                             }}
-                            className=" text-white  font-inter text-xl cursor-pointer bg-[#008CC1] w-full h-full flex items-center justify-center rounded-lg py-3 px-5 absolute top-0 left-0 font-semibold tracking-wider group-hover:bg-[#00BFA6] border-2 border-transparent group-hover:border-black transition-all duration-300 ease-in-out " > CONTACT US</button>
+                            className=" text-white  font-inter text-lg cursor-pointer bg-[#008CC1] w-full h-full flex items-center justify-center rounded-lg py-2 px-5 absolute top-0 left-0 font-semibold tracking-wider group-hover:bg-[#00BFA6] border-2 border-transparent group-hover:border-black transition-all duration-300 ease-in-out " > CONTACT US</button>
                     </Link>
                 </div>
             </div>
