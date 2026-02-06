@@ -27,3 +27,14 @@ export interface ServiceDataType {
   description: string;
   image: string
 }
+
+export interface TenantDataType {
+  id: string;
+  founder_name: string;
+  founder_email: string;
+  startup_name: string;
+  startup_description: string;
+  startup_portfolio_url: string;
+  startup_image_url: string;
+  phone_number: string;
+}

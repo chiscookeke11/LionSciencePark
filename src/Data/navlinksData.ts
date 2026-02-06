@@ -26,5 +26,9 @@ export const navLinkData = [
         label: "OUR TENANTS",
         url: "/our-tenants"
     },
+        {
+        label: "STARTUPS",
+        url: "/startups"
+    },
 
 ]
