@@ -1,6 +1,7 @@
 "use client";
 
 import { TenantDataType } from "@/Types/types";
+import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -38,22 +39,22 @@ export default function TenantCard({ data }: TenantCardProps) {
         <div className="w-full flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-7">
           <a
             href={`mailto:${data.founder_email}`}
-            className="text-sm"
+            className="text-xs"
           >
-            {data.founder_email}
+            <Mail size={16} color="#008CC1" />
           </a>
-          <span className="text-sm">{data.phone_number}</span>
+          <span className="text-xs flex items-center gap-1 text-[#008CC1]  "> <Phone size={16} color="#008CC1" /> {data.phone_number}</span>
         </div>
 
-        <p className="text-base md:text-lg text-gray-600">
+        <p className="text-sm md:text-base text-gray-600">
           {data.startup_description}
         </p>
 
-        <div className="mt-4 w-[200px] h-[60px] relative flex items-center justify-center rounded-xl group cursor-pointer">
-          <div className="bg-black w-full h-full absolute top-0 left-0 rounded-lg group-hover:left-2 group-hover:top-2 transition-all duration-300" />
+        <div className="mt-4 w-[200px] h-[50px] relative flex items-center justify-center rounded-xl group cursor-pointer">
+          <div className="bg-black cursor-pointer w-full h-full absolute top-0 left-0 rounded-lg group-hover:left-2 group-hover:top-2 transition-all duration-300" />
 
           <Link href={data.startup_portfolio_url} target="_blank" >
-            <button className="text-white text-lg bg-[#008CC1] w-full h-full flex items-center justify-center rounded-lg absolute top-0 left-0 font-semibold tracking-wider group-hover:bg-[#00BFA6] border-2 border-transparent group-hover:border-black transition-all duration-300">
+            <button className="text-white text-base bg-[#008CC1] w-full h-full flex items-center justify-center rounded-lg absolute top-0 left-0 font-semibold tracking-wider group-hover:bg-[#00BFA6] border-2 border-transparent group-hover:border-black transition-all duration-300">
               View Portfolio
             </button>
           </Link>

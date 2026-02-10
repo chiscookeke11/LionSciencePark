@@ -29,7 +29,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="w-full  py-3 md:py-5 px-4 lg:px-[13%]   flex items-center justify-between font-inter  z-50 border-b border-b-black bg-white  " >
+        <nav className="w-full  py-3 md:py-5 px-4 lg:px-[9%]   flex items-center justify-between font-inter  z-50 border-b border-b-black bg-white  " >
             <Link href={"/"} >
                 <Image src={"/logo/LSP-logo-blue-removeBG.png"} alt="logo" height={10} width={150} className="w-[100px] h-[50px] md:w-[150px] md:h-[60px] object-center object-cover  " />
             </Link>
