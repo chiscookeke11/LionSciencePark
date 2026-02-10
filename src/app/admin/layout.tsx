@@ -103,7 +103,7 @@ export default function AdminLayout({
       </nav>
 
       {/* Header */}
-      <header className="w-full flex  items-start md:items-center justify-between gap-6 px-6 py-4 bg-[#F7FCFE] border-b border-[#008CC1]/20">
+      <header className="w-full flex  items-center md:items-center justify-between gap-6 px-6 py-4 bg-[#F7FCFE] border-b border-[#008CC1]/20">
         <h2 className="text-xs font-semibold text-[#008CC1]">
           Welcome,{" "}
           <span className="font-normal break-all">{user.email}</span>
@@ -122,8 +122,8 @@ export default function AdminLayout({
         <nav className="w-full bg-gray-100 py-3 overflow-x-auto shadow-sm  " >
 
           <div className="w-fit px-4 flex items-center  gap-4 flex-nowrap min-w-max  " >
-            <Link href={"/admin/"} className="flex items-center shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit text-base font-medium font-lato" >Blog control Panel</Link>
-            <Link href={"/admin/tenants-panel"} className="flex items-center shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit text-base font-medium font-lato" >Tenants Control Panel</Link>
+            <Link href={"/admin/"} className="flex items-center text-sm shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit md:text-base font-medium font-lato" >Blog control Panel</Link>
+            <Link href={"/admin/tenants-panel"} className="flex items-center shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit text-sm md:text-base font-medium font-lato" >Tenants Control Panel</Link>
           </div>
         </nav>
 
