@@ -104,14 +104,14 @@ export default function AdminLayout({
 
       {/* Header */}
       <header className="w-full flex flex-col md:flex-row items-start md:items-center justify-between gap-6 px-6 py-4 bg-[#F7FCFE] border-b border-[#008CC1]/20">
-        <h2 className="text-lg font-semibold text-[#008CC1]">
+        <h2 className="text-xs font-semibold text-[#008CC1]">
           Welcome,{" "}
           <span className="font-normal break-all">{user.email}</span>
         </h2>
 
         <button
           onClick={handleSignOut}
-          className="bg-[#008CC1] text-white px-5 py-2 rounded-md hover:bg-[#008CC1]/90 transition-all ml-auto"
+          className="bg-[#008CC1] text-white text-xs px-5 py-2 rounded-md hover:bg-[#008CC1]/90 transition-all ml-auto"
         >
           Sign Out
         </button>
