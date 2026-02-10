@@ -29,7 +29,7 @@ export interface ServiceDataType {
 }
 
 export interface TenantDataType {
-  id: string;
+  id?: string;
   founder_name: string;
   founder_email: string;
   startup_name: string;

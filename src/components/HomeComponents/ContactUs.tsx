@@ -61,8 +61,7 @@ export default function ContactUs() {
             process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
         )
             .then(
-                (result) => {
-                    // console.log(result.text);
+                () => {
                     toast.success("Message sent successfully!");
                     setLoading(false)
                     setFormValues({

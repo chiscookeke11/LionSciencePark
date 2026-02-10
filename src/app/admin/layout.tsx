@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 /**
- * ✅ Allowed admin emails
+ *  Allowed admin emails
  * You can later move this to env or database
  */
 const ALLOWED_ADMINS = [
@@ -28,7 +28,7 @@ export default function AdminLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // ✅ Check existing session
+    //  Check existing session
     const getUser = async () => {
       const { data, error } = await supabase.auth.getUser();
       if (error) console.error("Auth check failed:", error.message);
@@ -38,7 +38,7 @@ export default function AdminLayout({
 
     getUser();
 
-    // ✅ Listen for auth state changes
+    //  Listen for auth state changes
     const { data: authListener } =
       supabase.auth.onAuthStateChange((_event, session) => {
         setUser(session?.user ?? null);
@@ -49,14 +49,14 @@ export default function AdminLayout({
     };
   }, []);
 
-  // ✅ Sign out handler
+  //  Sign out handler
   const handleSignOut = async () => {
     const { error } = await supabase.auth.signOut();
     if (error) console.error("Sign-out error:", error.message);
     else setUser(null);
   };
 
-  // ✅ Loading state
+  //  Loading state
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center text-[#008CC1] font-medium font-poppins">
@@ -70,7 +70,7 @@ export default function AdminLayout({
     return <AuthModal />;
   }
 
-  // ❌ Logged in but NOT an admin
+  //  Logged in but NOT an admin
   if (!ALLOWED_ADMINS.includes(user.email ?? "")) {
     return (
       <div className="h-screen flex flex-col items-center justify-center gap-4 font-poppins">
@@ -92,19 +92,13 @@ export default function AdminLayout({
     );
   }
 
-  // ✅ Authorized admin layout
+  //  Authorized admin layout
   return (
     <div className="min-h-screen bg-white flex flex-col font-poppins">
       {/* Top Nav */}
       <nav className="p-3">
         <Link href="/">
-          <Image
-            src="/logo/LSP-logo-blue-removeBG.png"
-            alt="logo"
-            height={60}
-            width={150}
-            className="w-[100px] h-[50px] md:w-[150px] md:h-[60px] object-contain"
-          />
+          <Image src={"/logo/LSP-logo-blue-removeBG.png"} alt="logo" height={10} width={150} className="w-[100px] h-[50px] md:w-[150px] md:h-[60px] object-center object-cover  " />
         </Link>
       </nav>
 
@@ -124,7 +118,18 @@ export default function AdminLayout({
       </header>
 
       {/* Page Content */}
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 flex flex-col gap-4 ">
+        <nav className="w-full bg-gray-100 py-3 overflow-x-auto shadow-sm  " >
+
+          <div className="w-fit px-4 flex items-center  gap-4 flex-nowrap min-w-max  " >
+            <Link href={"/admin/"} className="flex items-center shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit text-base font-medium font-lato" >Blog control Panel</Link>
+            <Link href={"/admin/tenants-panel"} className="flex items-center shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit text-base font-medium font-lato" >Tenants Control Panel</Link>
+          </div>
+        </nav>
+
+
+        {children}
+      </main>
     </div>
   );
 }

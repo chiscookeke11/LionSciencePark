@@ -6,47 +6,45 @@ interface ConfirmDeleteProps {
   setConfirmDeleteModal?: React.Dispatch<SetStateAction<boolean>>;
   onDelete?: (id: string) => void;
   selectedIndex: string;
+  collectionName: string
 }
 
 const deleteItem = async (id: string, collectionName: string) => {
-  const { data, error, status } = await supabase
+  const { error } = await supabase
     .from(collectionName)
     .delete()
-    .eq("id", id)
-    .select(); // ✅ ensures deleted row is returned
+    .eq("id", id);
 
   if (error) throw error;
-  if (status !== 200 && status !== 204) throw new Error("Failed to delete item.");
-  return data;
+  return true;
 };
+
 
 export default function ConfirmDelete({
   setConfirmDeleteModal,
   onDelete,
   selectedIndex,
+  collectionName
 }: ConfirmDeleteProps) {
+
   const handleDelete = async (id: string) => {
     const toastId = toast.loading("Deleting...");
 
     try {
-      const deleted = await deleteItem(id, "news");
-
-      if (!deleted || deleted.length === 0) {
-        throw new Error("Item not found or already deleted.");
-      }
+      await deleteItem(id, collectionName);
 
       toast.dismiss(toastId);
-      toast.success("Blog deleted successfully ✅");
+      toast.success("Blog deleted successfully");
 
-      // ✅ Only update UI after confirming successful deletion
       onDelete?.(id);
       setConfirmDeleteModal?.(false);
     } catch (err) {
-      // console.error(err);
-      toast.error("Failed to delete blog!")
+      console.error(err);
       toast.dismiss(toastId);
+      toast.error("Failed to delete blog!");
     }
   };
+
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black/55 backdrop-blur-sm p-4 z-50">

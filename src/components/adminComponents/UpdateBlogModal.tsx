@@ -132,7 +132,7 @@ export default function UpdateBlogModal({
             toast.success("Blog updated successfully!")
             setShowEditBlogModal(false)
         } catch (error) {
-            // console.error(error)
+            console.error(error)
             toast.error("Failed to update blog")
         } finally {
             setLoading(false)

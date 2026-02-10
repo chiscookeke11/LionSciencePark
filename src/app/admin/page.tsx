@@ -103,7 +103,7 @@ export default function Page() {
 
 
             {openBlogModal && (<AddBlogModal setOpenBlogModal={setOpenBlogModal} addBlogToUI={addBlogToUI} />)}
-            {confirmDeleteModal && <ConfirmDelete onDelete={removeBlogFromUI} setConfirmDeleteModal={setConfirmDeleteModal} selectedIndex={selectedIndex} />}
+            {confirmDeleteModal && <ConfirmDelete collectionName={"news"} onDelete={removeBlogFromUI} setConfirmDeleteModal={setConfirmDeleteModal} selectedIndex={selectedIndex} />}
             {showEditBlogModal && <UpdateBlogModal setShowEditBlogModal={setShowEditBlogModal} selectedIndex={selectedIndex} updateBlogInUI={updateBlogInUI} />}
 
 
