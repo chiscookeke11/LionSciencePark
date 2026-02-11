@@ -55,16 +55,19 @@ export default function Page() {
 
 
 
-  // This function updates the tenants data
-const updateTenantInUI = (updatedTenant: TenantDataType) => {
-  setTenants((prevTenants) =>
-    prevTenants
-      ? prevTenants.map((tenant) =>
-          tenant.id === updatedTenant.id ? updatedTenant : tenant
-        )
-      : [updatedTenant]
-  );
-};
+    // This function updates the tenants data
+    const updateTenantInUI = (updatedTenant: TenantDataType) => {
+        if (!updatedTenant) return;
+
+
+        setTenants((prevTenants) =>
+            prevTenants
+                ? prevTenants.map((tenant) =>
+                    tenant.id === updatedTenant.id ? updatedTenant : tenant
+                )
+                : [updatedTenant]
+        );
+    };
 
 
 
