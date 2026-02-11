@@ -7,13 +7,14 @@ import { supabase } from "../../../../../lib/supabaseClient"
 import AdminTenantsCard from "@/components/adminComponents/AdminTenantCard"
 import ConfirmDelete from "@/components/adminComponents/ConfirmDelete"
 import AddTenantModal from "@/components/adminComponents/AddTenantModal"
+import EditTenantModal from "@/components/adminComponents/EditTenantModal"
 
 
 export default function Page() {
     const [addModal, setaddModal] = useState(false)
     const [tenants, setTenants] = useState<TenantDataType[] | null>(null)
     const [showOptionsIndex, setShowOptionsIndex] = useState<string | null>(null);
-    const [showEditBlogModal, setShowEditBlogModal] = useState(false)
+    const [showEditTenantModal, setShowEditTenantModal] = useState(false)
     const [selectedIndex, setSelectedIndex] = useState("")
     const [confirmDeleteModal, setConfirmDeleteModal] = useState(false)
     const collectionName = "tenants"
@@ -54,6 +55,20 @@ export default function Page() {
 
 
 
+  // This function updates the tenants data
+const updateTenantInUI = (updatedTenant: TenantDataType) => {
+  setTenants((prevTenants) =>
+    prevTenants
+      ? prevTenants.map((tenant) =>
+          tenant.id === updatedTenant.id ? updatedTenant : tenant
+        )
+      : [updatedTenant]
+  );
+};
+
+
+
+
     return (
         <div className=" w-full flex h-fit min-h-screen px-[3%] py-10 bg-white font-poppins flex-col items-start gap-5 relative "  >
             <h1 className=" text-xl md:text-3xl font-semibold text-[#008CC1] " >Tenants Control Panel</h1>
@@ -80,7 +95,7 @@ export default function Page() {
                                             showOptionsIndex={showOptionsIndex}
                                             setShowOptionsIndex={setShowOptionsIndex}
                                             setSelectedIndex={setSelectedIndex}
-                                            setShowEditBlogModal={setShowEditBlogModal}
+                                            setShowEditBlogModal={setShowEditTenantModal}
                                             setConfirmDeleteModal={setConfirmDeleteModal}
                                         />
                                     ))
@@ -97,6 +112,7 @@ export default function Page() {
 
             {confirmDeleteModal && <ConfirmDelete onDelete={removeBlogFromUI} setConfirmDeleteModal={setConfirmDeleteModal} selectedIndex={selectedIndex} collectionName={collectionName} />}
             {addModal && <AddTenantModal setOpenModal={setaddModal} addTenantToUI={addTenantToUI} />}
+            {showEditTenantModal && <EditTenantModal setShowEditTenantModal={setShowEditTenantModal} selectedIndex={selectedIndex} updateTenantInUI={updateTenantInUI} />}
         </div>
     )
 }

@@ -4,6 +4,7 @@ import type React from "react"
 import { useEditor, EditorContent } from "@tiptap/react"
 import Spinner from "../UI/Spinner"
 import StarterKit from "@tiptap/starter-kit"
+import { useEffect } from "react"
 
 
 interface TiptapEditorProps {
@@ -23,9 +24,19 @@ const TiptapEditor: React.FC<TiptapEditorProps> = ({ content, onChange }) => {
         },
     })
 
+
+
+    useEffect(() => {
+        if (editor && content !== editor.getHTML()) {
+            editor.commands.setContent(content || "")
+        }
+    }, [content, editor])
+
+
+
     if (!editor) {
         return (
-         <Spinner/>
+            <Spinner />
         )
     }
 
