@@ -1,7 +1,7 @@
 "use client";
 
 import { TenantDataType } from "@/Types/types";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -36,14 +36,16 @@ export default function TenantCard({ data }: TenantCardProps) {
           {data.founder_name}
         </h2>
 
-        <div className="w-full flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-7">
+        <div className="w-full flex flex-row sm:items-center gap-2 sm:gap-7">
           <a
             href={`mailto:${data.founder_email}`}
             className="text-xs"
+            target="_blank"
           >
             <Mail size={16} color="#008CC1" />
           </a>
-          <span className="text-xs flex items-center gap-1 text-[#008CC1]  "> <Phone size={16} color="#008CC1" /> {data.phone_number}</span>
+          <span className="text-xs flex items-center gap-1 text-[#008CC1]  ">
+           {data.phone_number}</span>
         </div>
 
         <p className="text-sm md:text-base text-gray-600">
