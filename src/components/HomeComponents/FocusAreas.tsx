@@ -54,7 +54,8 @@ export default function FocusAreas() {
         </div>
 
         {/* Scroll Container */}
-        <div ref={targetRef} className="w-full max-w-3xl relative h-[420vh]  ">
+
+          <div ref={targetRef} className="w-full max-w-3xl relative h-[470vh]  ">
           <div className="w-full h-fit sticky top-[10%] max-w-3xl overflow-hidden  pt-28 ">
             <motion.div className="flex flex-col gap-20 h-full" style={{ y }}>
               {FocusAreasData.map((area, index) => (
@@ -63,7 +64,8 @@ export default function FocusAreas() {
             </motion.div>
           </div>
         </div>
-      </div>
+    </div>
+
 
 
 
