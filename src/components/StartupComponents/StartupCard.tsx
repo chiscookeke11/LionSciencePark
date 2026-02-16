@@ -1,17 +1,15 @@
-"use client";
-
-import { TenantDataType } from "@/Types/types";
-import { Mail } from "lucide-react";
+import { StartupDataType } from "@/Types/types";
 import Image from "next/image";
 import Link from "next/link";
 
-interface TenantCardProps {
-  data: TenantDataType;
+
+interface StartupCardProps {
+  data: StartupDataType;
 }
 
-export default function TenantCard({ data }: TenantCardProps) {
-  return (
-    <div className="text-[#3a3a3a] w-full max-w-xs lg:max-w-none bg-white shadow-sm rounded-md flex flex-col lg:flex-row gap-3 overflow-hidden">
+export default function StartupCard({data}: StartupCardProps) {
+    return (
+         <div className="text-[#3a3a3a] w-full max-w-xs lg:max-w-none bg-white shadow-sm rounded-md flex flex-col lg:flex-row gap-3 overflow-hidden">
 
       {/* Image */}
       <div className="w-full h-64 lg:h-auto lg:flex-[2] flex items-center justify-center bg-gray-400 relative">
@@ -63,5 +61,5 @@ export default function TenantCard({ data }: TenantCardProps) {
         </div>
       </div>
     </div>
-  );
+    )
 }

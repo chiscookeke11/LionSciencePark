@@ -115,7 +115,7 @@ export default function TenantHeroSection() {
 
             <div className=" md:basis-2/4 w-full flex items-center justify-center gap-3 flex-col text-center h-full  md:max-h-[400px] ">
                 <h4 className="text-black font-semibold  text-2xl md:text-4xl " >Our Tenants</h4>
-                <p className="text-lg md:text-xl font-medium " >Meet the innovative startups and companies currently incubated at Lion Science Park, driving breakthroughs in technology, science, and entrepreneurship.</p>
+                <p className="text-lg md:text-xl font-medium " >Meet the innovative startups and companies currently residing at Lion Science Park, driving breakthroughs in technology, science, and entrepreneurship.</p>
 
 
                 <motion.div

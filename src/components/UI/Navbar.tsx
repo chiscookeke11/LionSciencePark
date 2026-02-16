@@ -35,7 +35,7 @@ export default function Navbar() {
             </Link>
 
 
-            <ul className="hidden lg:flex items-center gap-10  " >
+            <ul className="hidden lg:flex items-center gap-8  " >
                 {navLinkData.map((navlink, index) => (
                     <li key={index} className={` font-medium text-base ${pathName === navlink.url ? "text-[#00BFA6]" : "text-black"}  hover:text-[#00BFA6] duration-300 ease-in-out transition-colors   `} ><Link href={navlink.url} className=""  >{navlink.label}</Link> </li>
                 ))}
