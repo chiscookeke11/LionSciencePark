@@ -19,7 +19,8 @@ export default function StartupHero() {
                 <Marquee speed={100} gradient={false} pauseOnHover  >
                     {
                         startupData.map((data, index) => (
-                            <div key={index} className="size-[250px] md:size-[350px] mx-2 bg-gray-200 rounded-xs relative  " title="name" >
+                            <div key={index} className="size-[250px] md:size-[350px] mx-2 bg-gray-200 rounded-xs relative overflow-hidden " title={data.name} >
+                                <div className="absolute inset-0 h-full w-full bg-black/15 z-10 hover:bg-transparent cursor-pointer transition-all duration-150 ease-in-out  " />
                                 <Image src={data.image} alt="image" fill className="object-cover object-center " />
                             </div>
                         ))

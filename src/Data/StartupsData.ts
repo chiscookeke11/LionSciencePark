@@ -3,28 +3,36 @@
 export const startupData = [
     {
         name: "",
-        image: ""
+        image: "/startups-media/one.jpeg"
     },
 
     {
         name: "",
-        image: ""
+        image: "/startups-media/two.jpeg"
     },
 
     {
         name: "",
-        image: ""
+        image: "/startups-media/three.jpeg"
     },
     {
         name: "",
-        image: ""
+        image: "/startups-media/four.jpeg"
     },
     {
         name: "",
-        image: ""
+        image: "/startups-media/six.jpeg"
     },
     {
         name: "",
-        image: ""
+        image: "/startups-media/seven.jpeg"
+    },
+     {
+        name: "",
+        image: "/startups-media/eight.jpeg"
+    },
+     {
+        name: "",
+        image: "/startups-media/nine.jpeg"
     },
 ]

@@ -58,7 +58,7 @@ export default function StartupPage() {
         <div className="w-full bg-white" >
             <StartupHero />
 
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 place-items-center justify-items-center justify-center gap-10 px-[3%] py-16 mt-20 bg-[#008CC1]  " >
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 place-items-center justify-items-center justify-center gap-10 px-[3%] py-16 mt-20 bg-[#008CC1] font-poppins  " >
 
                 {
                     startupsData?.map((data) => (

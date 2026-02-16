@@ -281,7 +281,7 @@ export default function AddTenantModal({ setOpenModal, addTenantToUI }: AddTenan
                         disabled={loading}
                         className="flex items-center text-white justify-center gap-4 bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit text-base font-medium font-lato"
                     >
-                        {loading ? "Uploading ..." : "Add Blog"}
+                        {loading ? "Uploading ..." : "Add Tenant"}
                     </button>
                 </div>
 

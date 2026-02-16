@@ -50,7 +50,7 @@ export default function ConfirmDelete({
     <div className="fixed inset-0 flex items-center justify-center bg-black/55 backdrop-blur-sm p-4 z-50">
       <div className="w-full max-w-md flex flex-col items-center gap-10 bg-[#F7FCFE] shadow-md rounded-md p-8">
         <h1 className="text-center font-merienda font-extrabold text-[#008CC1] text-xl md:text-3xl">
-          Are you sure you want to delete this blog?
+          Are you sure you want to delete this item?
         </h1>
 
         <div className="flex items-center gap-6">
