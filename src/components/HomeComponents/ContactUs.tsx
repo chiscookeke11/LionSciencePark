@@ -97,12 +97,12 @@ export default function ContactUs() {
                 <div className="w-full flex flex-col items-center gap-10 " >
                     <label htmlFor="fullname" className="w-full flex flex-col gap-1 items-start" >
                         <span className="text-sm font-semibold">Full Name</span>
-                        <input onChange={handleChange} value={formValues.fullName} type="text" name="fullName" id="fullname" placeholder="John Doe" className=" text-[#0a0a0a] w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none focus:border-b-[#00BFA6] transition-all duration-75 ease-in-out text-base font-medium " />
+                        <input onChange={handleChange} value={formValues.fullName} type="text" name="fullName" id="fullname" placeholder="Okeke Chinedu" className=" text-[#0a0a0a] w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none focus:border-b-[#00BFA6] transition-all duration-75 ease-in-out text-base font-medium " />
                     </label>
 
                     <label htmlFor="email" className="w-full flex flex-col gap-1 items-start" >
                         <span className="text-sm font-semibold">Email</span>
-                        <input onChange={handleChange} value={formValues.email} type="email" name="email" id="email" placeholder="john@gmail.com" className="text-[#0a0a0a] w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none text-base font-medium focus:border-b-[#00BFA6] transition-all duration-75 ease-in-out" />
+                        <input onChange={handleChange} value={formValues.email} type="email" name="email" id="email" placeholder="chiscookeke11@gmail.com" className="text-[#0a0a0a] w-full border-0 border-b-2 border-[#008CC1] pb-2 outline-none focus:outline-none text-base font-medium focus:border-b-[#00BFA6] transition-all duration-75 ease-in-out" />
                     </label>
 
                     <label htmlFor="phoneNumber" className="w-full  flex flex-col gap-1 items-start" >
