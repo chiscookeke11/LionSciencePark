@@ -3,7 +3,7 @@ import Spinner from "@/components/UI/Spinner";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Startups | Coming Soon | Lion Science Park",
+  title: "Startups | Lion Science Park",
   description:
     "Exciting startups and innovative ventures are coming soon at Lion Science Park. Stay tuned to discover the next wave of science and technology entrepreneurs.",
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Startups | Coming Soon | Lion Science Park",
+    title: "Startups | Lion Science Park",
     description:
       "Get ready to explore innovative startups and ventures at Lion Science Park. Stay updated on the upcoming wave of entrepreneurs and technology pioneers.",
     url: "https://www.lionsciencepark.com/startups",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Startups | Coming Soon | Lion Science Park",
+    title: "Startups | Lion Science Park",
     description:
       "Exciting startups and technology ventures are coming soon at Lion Science Park. Stay tuned!",
     images: ["/startups/startups-hero.webp"],

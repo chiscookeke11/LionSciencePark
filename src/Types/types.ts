@@ -50,3 +50,18 @@ export interface StartupDataType {
   startup_image_url: string;
   phone_number: string;
 }
+
+
+export interface CohortFormData {
+  id?: string;
+  startup_name: string,
+  founder_phonenumber: string,
+  founder_email: string,
+  problem_solving: string,
+  solution_description: string,
+  industry_category: "fintech" | "edutech" | "healthtech" | "agrictech" | "ai/data" | "e-commerce" | "others" | "",
+  startup_stage: "idealogy" | "prototype/mvp" | "generating revenue" | "",
+  have_customers: boolean,
+  have_pitchdeck: boolean,
+  pitchdeck_url: string,
+}
