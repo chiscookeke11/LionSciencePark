@@ -74,7 +74,7 @@ export default function CohortPage() {
 
                         {/* Founder's phone number  */}
                           <label htmlFor="founder_phonenumber" className="w-full flex flex-col gap-1">
-                            <span className="text-lg font-semibold text-[#00BFA6]">Founder's Phone number *</span>
+                            <span className="text-lg font-semibold text-[#00BFA6]">Founder&apos;s Phone number *</span>
                             <input
                                 value={formValues.founder_phonenumber}
                                 id="founder_phonenumber"
@@ -90,7 +90,7 @@ export default function CohortPage() {
 
                         {/* Founder's email */}
                            <label htmlFor="founder_email" className="w-full flex flex-col gap-1">
-                            <span className="text-lg font-semibold text-[#00BFA6]">Founder's founder_email *</span>
+                            <span className="text-lg font-semibold text-[#00BFA6]">Founder&apos;s founder_email *</span>
                             <input
                                 value={formValues.founder_email}
                                 id="founder_email"
