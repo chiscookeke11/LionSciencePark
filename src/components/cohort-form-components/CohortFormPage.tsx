@@ -136,7 +136,12 @@ export default function CohortPage() {
                     onSubmit={handleSubmit}
                     className="font-onest bg-white w-full  h-fit py-20 px-4 flex flex-col items-center justify-between gap-7 rounded-2xl border " >
 
-                    <h1 className="font-onest font-semibold text-xl md:text-5xl text-center">Apply for cohort 6</h1>
+                    <div className="flex flex-col items-center justify-center gap-3" >
+                        <h1 className="font-onest font-semibold text-xl md:text-5xl text-center">Apply for cohort 6</h1>
+                        <p className="text-sm md:text-base font-inter mb-7 text-center font-medium">
+                            Application Deadline: March 2 – 14, 2026
+                        </p>
+                    </div>
 
 
 
