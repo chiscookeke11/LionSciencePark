@@ -1,0 +1,5 @@
+/* shadcn default overrides */
+
+.select-content {
+  z-index: 50;
+}

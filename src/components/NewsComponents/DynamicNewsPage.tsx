@@ -54,7 +54,7 @@ export default function Page() {
     useEffect(() => {
         fetchNews()
         fetchCurrentNews()
-    }, [])
+    }, [fetchCurrentNews])
 
 
 

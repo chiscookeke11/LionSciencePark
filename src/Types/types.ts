@@ -51,17 +51,29 @@ export interface StartupDataType {
   phone_number: string;
 }
 
+export type TeamMember = {
+fullName: string;
+role: string
+}
 
 export interface CohortFormData {
   id?: string;
   startup_name: string,
   founder_phonenumber: string,
+  team_members: TeamMember[],
   founder_email: string,
   problem_solving: string,
   solution_description: string,
   industry_category: "fintech" | "edutech" | "healthtech" | "agrictech" | "ai/data" | "e-commerce" | "others" | "",
   startup_stage: "idealogy" | "prototype/mvp" | "generating revenue" | "",
-  have_customers: boolean,
-  have_pitchdeck: boolean,
+  have_customers: string,
+  have_pitchdeck: string,
   pitchdeck_url: string,
+  pitchdeck_file: File | null
+}
+
+
+export interface customSelectTypes {
+  label: string;
+  value: string
 }

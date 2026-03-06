@@ -1,7 +1,6 @@
 "use client";
 
 import { TenantDataType } from "@/Types/types";
-import { Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 

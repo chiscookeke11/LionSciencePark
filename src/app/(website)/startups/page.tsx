@@ -1,5 +1,4 @@
 import StartupPage from "@/components/StartupComponents/StartupPage";
-import Spinner from "@/components/UI/Spinner";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

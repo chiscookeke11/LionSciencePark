@@ -56,7 +56,7 @@ export default function StartupPage() {
     }
 
     return (
-        <div className="w-full bg-white  " >
+        <div className="w-full bg-white  text-[#3a3a3a]" >
             <StartupHero />
 
             {startupsData && startupsData?.length > 0 && (

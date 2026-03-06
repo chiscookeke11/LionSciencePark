@@ -1,7 +1,7 @@
 
 
 
-import { StartupDataType, TenantDataType } from "@/Types/types";
+import { StartupDataType } from "@/Types/types";
 import { Edit, EllipsisVertical, Trash, X } from "lucide-react";
 import Image from "next/image";
 import { SetStateAction } from "react";
