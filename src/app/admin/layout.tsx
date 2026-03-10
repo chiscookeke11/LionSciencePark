@@ -125,6 +125,7 @@ export default function AdminLayout({
             <Link href={"/admin/"} className="flex items-center text-sm shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit md:text-base font-medium font-lato" >Blog control Panel</Link>
             <Link href={"/admin/tenants-panel"} className="flex items-center shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit text-sm md:text-base font-medium font-lato" >Tenants Control Panel</Link>
             <Link href={"/admin/startups-panel"} className="flex items-center shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit text-sm md:text-base font-medium font-lato" >Startups Control Panel</Link>
+            <Link href={"/admin/cohort-registration"} className="flex items-center shrink-0 text-white justify-center gap-4 rounded-xs bg-[#008CC1] cursor-pointer hover:bg-[#008CC1]/90 py-3 px-6 h-fit text-sm md:text-base font-medium font-lato" >Cohort Registrations</Link>
           </div>
         </nav>
 
