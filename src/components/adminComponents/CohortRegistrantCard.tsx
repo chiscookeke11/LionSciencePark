@@ -26,6 +26,8 @@ export default function CohortRegistrantCard({ data }: CohortRegistrantCardProps
                 <span className="font-semibold " >Category: </span>
                 {data.industry_category}
             </h3>
+
+            <small className=" text-[#999999] mx-auto " >Tap to view details </small>
         </Link>
     )
 }

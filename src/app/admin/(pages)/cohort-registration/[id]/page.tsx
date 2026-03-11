@@ -75,27 +75,85 @@ export default function Page() {
                     </thead>
 
                     {/* Table Body */}
-                    <tbody className="font-normal text-sm " >
+                    <tbody className="font-normal text-sm">
                         <tr>
                             <td className="border px-4 py-2">Startup Name</td>
                             <td className="border px-4 py-2">{registrant?.startup_name || "-"}</td>
                         </tr>
+
                         <tr>
-                            <td className="border px-4 py-2">Founder Phone Number </td>
+                            <td className="border px-4 py-2">Founder Phone Number</td>
                             <td className="border px-4 py-2">{registrant?.founder_phonenumber || "-"}</td>
                         </tr>
+
                         <tr>
                             <td className="border px-4 py-2">Founder Email</td>
                             <td className="border px-4 py-2">{registrant?.founder_email || "-"}</td>
                         </tr>
+
                         <tr>
-                            <td className="border px-4 py-2">Problem we are solving</td>
+                            <td className="border px-4 py-2">Problem We Are Solving</td>
                             <td className="border px-4 py-2">{registrant?.problem_solving || "-"}</td>
                         </tr>
 
+                        <tr>
+                            <td className="border px-4 py-2">Solution Description</td>
+                            <td className="border px-4 py-2">{registrant?.solution_description || "-"}</td>
+                        </tr>
 
+                        <tr>
+                            <td className="border px-4 py-2">Industry Category</td>
+                            <td className="border px-4 py-2">{registrant?.industry_category || "-"}</td>
+                        </tr>
 
+                        <tr>
+                            <td className="border px-4 py-2">Startup Stage</td>
+                            <td className="border px-4 py-2">{registrant?.startup_stage || "-"}</td>
+                        </tr>
 
+                        <tr>
+                            <td className="border px-4 py-2">Have Customers</td>
+                            <td className="border px-4 py-2">{registrant?.have_customers || "-"}</td>
+                        </tr>
+
+                        <tr>
+                            <td className="border px-4 py-2">Have Pitch Deck</td>
+                            <td className="border px-4 py-2">{registrant?.have_pitchdeck || "-"}</td>
+                        </tr>
+
+                        <tr>
+                            <td className="border px-4 py-2">Pitch Deck URL</td>
+                            <td className="border px-4 py-2">
+                                {registrant?.pitchdeck_url ? (
+                                    <a
+                                        href={registrant.pitchdeck_url}
+                                        target="_blank"
+                                        className="text-blue-600 underline"
+                                    >
+                                        View Pitch Deck
+                                    </a>
+                                ) : (
+                                    "-"
+                                )}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td className="border px-4 py-2">Team Members</td>
+                            <td className="border px-4 py-2">
+                                {registrant?.team_members?.length ? (
+                                    <ul className="list-disc ml-5">
+                                        {registrant.team_members.map((member, index) => (
+                                            <li key={index}>
+                                                {member.fullName} {member.role && `- ${member.role}`}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    "-"
+                                )}
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
