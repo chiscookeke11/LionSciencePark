@@ -240,15 +240,15 @@ export default function UpdateBlogModal({
                         />
                     </label>
 
-                    <label htmlFor="insta_link" className="w-full flex flex-col gap-1">
+                    <label htmlFor="instagram_link" className="w-full flex flex-col gap-1">
                         <span className="text-lg font-semibold text-[#008CC1]">
                             Instagram link
                         </span>
                         <input
                             value={formValues.instagram_link ?? ""}
-                            name="insta_link"
+                            name="instagram_link"
                             onChange={handleChange}
-                            id="insta_link"
+                            id="instagram_link"
                             placeholder="Post Instagram link"
                             className="bg-transparent outline-none border-2 border-[#008CC1] py-2 px-3 text-[#1e1e1e] font-semibold text-base"
                         />
