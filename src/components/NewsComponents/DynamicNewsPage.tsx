@@ -40,7 +40,10 @@ export default function Page() {
 
 
     const fetchNews = async () => {
-        const { data, error } = await supabase.from('news').select("*")
+        const { data, error } = await supabase
+        .from('news')
+        .select("*")
+        .order("createdAt", {ascending: false})
 
         if (error) {
             console.error("Error fetching news")
@@ -102,7 +105,7 @@ export default function Page() {
 
 
 
-                                <div className=" flex items-center gap-14 w-full  px-[3%]   mt-4  " >
+                                <div className=" flex items-center gap-6 md:gap-14 w-full  px-[3%]   mt-4  " >
                                     {currentNews.facebook_link && <a href={currentNews.facebook_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Facebook size={20} /> </a>}
                                     {currentNews.instagram_link && <a href={currentNews.instagram_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Instagram fontSize={"medium"} />  </a>}
                                     {currentNews.linkedin_link && <a href={currentNews.linkedin_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <LinkedIn fontSize={"medium"} /> </a>}

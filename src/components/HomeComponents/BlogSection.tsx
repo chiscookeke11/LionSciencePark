@@ -5,6 +5,7 @@ import { supabase } from "../../../lib/supabaseClient"
 import { useEffect, useState } from "react"
 import Spinner from "../UI/Spinner"
 import NewsCard from "../NewsComponents/NewsCard"
+import Link from "next/link"
 
 
 export default function BlogSection() {
@@ -12,7 +13,10 @@ export default function BlogSection() {
 
 
     const fetchNews = async () => {
-        const { data, error } = await supabase.from('news').select("*")
+        const { data, error } = await supabase
+            .from('news')
+            .select("*")
+            .order("createdAt", { ascending: false })
 
         if (error) {
             console.error("Error fetching news")
@@ -45,6 +49,9 @@ export default function BlogSection() {
                         </>
                     )
             }
+
+            <Link href={"/news"} className="text-white text-lg md:text-2xl font-medium " > See more </Link>
+
         </div>
     )
 }
