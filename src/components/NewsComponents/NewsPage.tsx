@@ -118,7 +118,7 @@ export default function NewsPage() {
                                             })
                                             : "No date available"}
                                     </p>
-                                    <h1 className="font-syne font-semibold text-2xl text-start font-onest " >{latestNews?.title} </h1>
+                                    <h1 className="font-syne font-semibold text-lg md:text-2xl text-start font-onest " >{latestNews?.title} </h1>
                                     <div dangerouslySetInnerHTML={{ __html: latestNews?.content.trim().slice(0, 60) + "..." }} className="flex items-center  text-sm font-normal text-start font-inter  flex-wrap  " />
                                 </div>
                             </div>

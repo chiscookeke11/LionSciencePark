@@ -81,7 +81,7 @@ export default function Page() {
                 :
                 (
                     <>
-                        <section className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-24 h-[90vh] px-[4%] md:px-[7%] bg-[#008CC1] border-b border-black " >
+                        <section className="w-full flex flex-col md:flex-row items-center justify-center gap-12 py-24 h-[90vh] px-[2%] md:px-[7%] bg-[#008CC1] border-b border-black " >
 
                             <div className="  md:flex-1/2 flex items-center justify-center h-[250px] md:h-full bg-gray-300 w-full rounded-2xl border border-black overflow-hidden " >
                                 <CldImage src={currentNews.image} alt="image" height={1500} width={1500} crop={{ type: "auto", source: true }} className="object-cover object-center h-full w-full " />
@@ -126,7 +126,7 @@ export default function Page() {
 
 
 
-                        <div className="w-full flex flex-col gap-6 items-center justify-center px-[4%] py-24 font-inter bg-[#00BFA6] border border-black " >
+                        <div className="w-full flex flex-col gap-6 items-center justify-center px-[2%] md:px-[4%] py-24 font-inter bg-[#00BFA6] border border-black " >
 
                             <h2 className=" text-3xl md:text-4xl font-bold font-onest text-[#030100] mr-auto ml-10 " >More News</h2>
 
