@@ -9,17 +9,13 @@ import { Instagram, LinkedIn, Twitter } from "@mui/icons-material"
 import { CldImage } from "next-cloudinary"
 import NewsCard from "@/components/NewsComponents/NewsCard"
 import { supabase } from "../../../lib/supabaseClient"
-
-
+import PortableTextRenderer from "../UI/PortableTextRenderer"
 
 
 export default function Page() {
     const { id } = useParams()
     const [currentNews, setCurrentNews] = useState<NewsBlogType | null>(null)
     const [news, setNews] = useState<NewsBlogType[] | null>(null)
-
-
-
 
     const fetchCurrentNews = async () => {
         if (!id) return;
@@ -37,19 +33,16 @@ export default function Page() {
     }
 
 
-
-
     const fetchNews = async () => {
         const { data, error } = await supabase
             .from('news')
             .select("*")
-            .order("createdAt", { ascending: false })
+            .order("created_at", { ascending: false })
 
         if (error) {
             console.error("Error fetching news")
         }
         else {
-            console.log(data)
             setNews(data)
         }
     }
@@ -105,7 +98,7 @@ export default function Page() {
 
 
 
-                                <div className=" flex items-center gap-5 md:gap-14 w-full  px-[3%]   mt-4  " >
+                                <div className=" flex items-center gap-5 md:gap-7 w-full  px-[3%]   mt-4  " >
                                     {currentNews.facebook_link && <a href={currentNews.facebook_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Facebook size={20} /> </a>}
                                     {currentNews.instagram_link && <a href={currentNews.instagram_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <Instagram fontSize={"medium"} />  </a>}
                                     {currentNews.linkedin_link && <a href={currentNews.linkedin_link} target="_blank" className="text-[#008CC1] bg-white size-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer" > <LinkedIn fontSize={"medium"} /> </a>}
@@ -120,10 +113,9 @@ export default function Page() {
 
                         <div
                             className="w-full py-28 px-[3%]  font-poppins font-medium text-base md:text-lg bg-[#f2f5fc]  "
-                            dangerouslySetInnerHTML={{ __html: currentNews.content }} />
-
-
-
+                        >
+                            <PortableTextRenderer value={currentNews.content} />
+                        </div>
 
 
                         <div className="w-full flex flex-col gap-6 items-center justify-center px-[2%] md:px-[4%] py-24 font-inter bg-[#00BFA6] border border-black " >

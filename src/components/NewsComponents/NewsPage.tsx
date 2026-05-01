@@ -21,7 +21,10 @@ export default function NewsPage() {
 
 
     const fetchNews = async () => {
-        const { data, error } = await supabase.from('news').select("*").order("publicationDate", { ascending: false })
+        const { data, error } = await supabase
+        .from('news')
+        .select("*")
+        .order("publicationDate", { ascending: false })
 
         if (error) {
             console.error("Error fetching news:")
