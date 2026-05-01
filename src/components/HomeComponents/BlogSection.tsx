@@ -16,7 +16,7 @@ export default function BlogSection() {
         const { data, error } = await supabase
             .from('news')
             .select("*")
-            .order("createdAt", { ascending: false })
+            .order("created_at", { ascending: false })
 
         if (error) {
             console.error("Error fetching news")
