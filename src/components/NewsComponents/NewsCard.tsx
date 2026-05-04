@@ -29,7 +29,7 @@ export default function NewsCard({ data }: RecentBlogCardProps) {
                             })
                             : "No date available"}
                     </p>
-                    <h1 className="font-syne font-semibold text-lg md:text-2xl text-start font-onest " >{data.title} </h1>
+                    <h1 className="font-syne font-semibold text-lg md:text-xl text-start font-onest " >{data.title} </h1>
                     <div dangerouslySetInnerHTML={{ __html: data.content.trim().slice(0, 50) + "..." }} className="flex items-center  text-sm font-normal text-start font-inter  flex-wrap  " />
                 </div>
             </div>
