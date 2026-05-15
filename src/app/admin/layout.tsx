@@ -16,7 +16,8 @@ const ALLOWED_ADMINS = [
   "uzodinma.ofoegbuna@unn.edu.ng",
   "team@lionsciencepark.com",
   "lionscienceparkunn1@gmail.com",
-  "denis.ekeh@unn.edu.ng"
+  "denis.ekeh@unn.edu.ng",
+  "chinedum.akwara@unn.edu.ng"
 ];
 
 export default function AdminLayout({
