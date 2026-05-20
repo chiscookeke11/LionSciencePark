@@ -53,8 +53,9 @@ export default function CohortPage() {
             return
         }
 
-        if (formValues.pitchdeck_file && formValues.pitchdeck_file.size > 5 * 1024 * 1024) {
-            toast.error("Pitch deck must be less than 5MB")
+        if (formValues.pitchdeck_file && formValues.pitchdeck_file.size > 15 * 1024 * 1024) {
+            toast.error("Pitch deck must not be more than 15MB")
+            return;
         }
 
 
